@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctw7nbntd5pcj"]
+
+[ext_resource type="Script" uid="uid://bvmt7is2bsw7r" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="1"]
+[ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="2_8hedq"]
+[ext_resource type="Script" uid="uid://bs5s4h0jby5nq" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="3_icxbs"]
+
+[sub_resource type="Resource" id="Resource_08pwa"]
+script = ExtResource("3_icxbs")
+closed_pose = ExtResource("2_8hedq")
+metadata/_custom_type_script = "uid://bs5s4h0jby5nq"
+
+[node name="GrabPointHandRight" type="Marker3D"]
+script = ExtResource("1")
+hand = 1
+hand_pose = SubResource("Resource_08pwa")

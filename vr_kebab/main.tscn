@@ -1,0 +1,109 @@
+[gd_scene load_steps=21 format=3 uid="uid://balta7jpa70ks"]
+
+[ext_resource type="Script" uid="uid://dlhnfmp6sue4g" path="res://VR.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bpdj5njb8nhot" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_fullglove_hand.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="3_272bh"]
+[ext_resource type="Texture2D" uid="uid://731ad6wchfl7" path="res://icon.svg" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="4_efxa6"]
+[ext_resource type="PackedScene" uid="uid://fiul51tsyoop" path="res://addons/godot-xr-tools/functions/function_teleport.tscn" id="5_4c57u"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_5vw27"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="5_kek77"]
+[ext_resource type="Material" uid="uid://txs6yqlmnpi2" path="res://addons/godot-xr-tools/hands/materials/glove_african_green_camo.tres" id="10_dg77c"]
+[ext_resource type="PackedScene" uid="uid://cefppmj8thpsw" path="res://Cube.tscn" id="11_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://cvrdpirsb3hdx" path="res://OrderBoardScene.tscn" id="12_dg77c"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
+ground_bottom_color = Color(0.64705884, 0.654902, 0.67058825, 1)
+ground_horizon_color = Color(0.64705884, 0.654902, 0.67058825, 1)
+
+[sub_resource type="Sky" id="Sky_noarx"]
+sky_material = SubResource("ProceduralSkyMaterial_a202f")
+
+[sub_resource type="Environment" id="Environment_a0tk4"]
+background_mode = 2
+sky = SubResource("Sky_noarx")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
+size = Vector3(20, 0.1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
+albedo_texture = ExtResource("4_272bh")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
+size = Vector3(20, 0.1, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w48qg"]
+size = Vector3(1, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vivmo"]
+size = Vector3(1, 1, 1.9985962)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_1bvp3")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="XROrigin3D/LeftHand" instance=ExtResource("2_lquwl")]
+
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand" instance=ExtResource("4_efxa6")]
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="RightHand" parent="XROrigin3D/RightHand" instance=ExtResource("3_7mycd")]
+
+[node name="FunctionTeleport" parent="XROrigin3D/RightHand" instance=ExtResource("5_4c57u")]
+player_height = 0.4
+
+[node name="FunctionPickup" parent="XROrigin3D/RightHand" instance=ExtResource("4_efxa6")]
+
+[node name="MovementDirect" parent="XROrigin3D/RightHand" instance=ExtResource("3_272bh")]
+
+[node name="MovementTurn" parent="XROrigin3D/RightHand" instance=ExtResource("5_kek77")]
+turn_mode = 2
+smooth_turn_speed = 4.0
+
+[node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("5_5vw27")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a0tk4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9435295, 0.3312885, 0, -0.3312885, 0.9435295, 0, 0, 0)
+sky_mode = 1
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_272bh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_5vw27")
+mesh = SubResource("BoxMesh_5vw27")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0441875, 0.25802612, 0)
+material_override = ExtResource("10_dg77c")
+mesh = SubResource("BoxMesh_w48qg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0008239746)
+shape = SubResource("BoxShape3D_vivmo")
+
+[node name="PickableObject" parent="MeshInstance3D/StaticBody3D" instance=ExtResource("11_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044187546, 0.7419739, -0.42231178)
+
+[node name="BoardRoot" parent="." instance=ExtResource("12_dg77c")]
+transform = Transform3D(-0.99643123, 0, -0.08440825, 0, 1, 0, 0.08440825, 0, -0.99643123, 1.1604524, 3.4687269, 4.279645)
