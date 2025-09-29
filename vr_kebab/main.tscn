@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://balta7jpa70ks"]
+[gd_scene load_steps=24 format=3 uid="uid://balta7jpa70ks"]
 
 [ext_resource type="Script" uid="uid://dlhnfmp6sue4g" path="res://VR.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bpdj5njb8nhot" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_fullglove_hand.tscn" id="2_lquwl"]
@@ -10,8 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_5vw27"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="5_kek77"]
 [ext_resource type="Material" uid="uid://txs6yqlmnpi2" path="res://addons/godot-xr-tools/hands/materials/glove_african_green_camo.tres" id="10_dg77c"]
-[ext_resource type="PackedScene" uid="uid://cefppmj8thpsw" path="res://Cube.tscn" id="11_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://cvrdpirsb3hdx" path="res://OrderBoardScene.tscn" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://h4425bqmbthy" path="res://item_spawner.gd" id="12_ycdy4"]
+[ext_resource type="Script" uid="uid://cvj5j2pcfixwl" path="res://formation_manager.gd" id="13_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://b1no5s6ghoj73" path="res://NPC.tscn" id="14_w48qg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
 ground_bottom_color = Color(0.64705884, 0.654902, 0.67058825, 1)
@@ -25,20 +27,23 @@ background_mode = 2
 sky = SubResource("Sky_noarx")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
-size = Vector3(20, 0.1, 20)
+size = Vector3(30, 0.1, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
 albedo_texture = ExtResource("4_272bh")
 uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
-size = Vector3(20, 0.1, 20)
+size = Vector3(30, 0.1, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_w48qg"]
 size = Vector3(1, 1, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vivmo"]
 size = Vector3(1, 1, 1.9985962)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dg77c"]
+size = Vector3(1, 0.1, 2)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_1bvp3")
@@ -74,6 +79,8 @@ turn_mode = 2
 smooth_turn_speed = 4.0
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("5_5vw27")]
+push_rigid_bodies = false
+ground_control = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_a0tk4")
@@ -83,6 +90,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9435295, 0.3312885, 0, -0.3312885, 0.94352
 sky_mode = 1
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_272bh")
@@ -91,19 +99,43 @@ shape = SubResource("BoxShape3D_272bh")
 material_override = SubResource("StandardMaterial3D_5vw27")
 mesh = SubResource("BoxMesh_5vw27")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0441875, 0.25802612, 0)
+[node name="Table" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.5, 0)
 material_override = ExtResource("10_dg77c")
 mesh = SubResource("BoxMesh_w48qg")
+metadata/_edit_group_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Table"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Table/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0008239746)
 shape = SubResource("BoxShape3D_vivmo")
 
-[node name="PickableObject" parent="MeshInstance3D/StaticBody3D" instance=ExtResource("11_ycdy4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044187546, 0.7419739, -0.42231178)
-
 [node name="BoardRoot" parent="." instance=ExtResource("12_dg77c")]
 transform = Transform3D(-0.99643123, 0, -0.08440825, 0, 1, 0, 0.08440825, 0, -0.99643123, 1.1604524, 3.4687269, 4.279645)
+
+[node name="ItemSpawner" type="Node3D" parent="." node_paths=PackedStringArray("spawn_zone")]
+script = ExtResource("12_ycdy4")
+spawn_zone = NodePath("../ItemSpawnZone")
+
+[node name="ItemSpawnZone" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.2, 0)
+visible = false
+mesh = SubResource("BoxMesh_dg77c")
+skeleton = NodePath("")
+
+[node name="FormationManager" type="Node3D" parent="." node_paths=PackedStringArray("spawn_position", "first_target_position", "formation_start_position")]
+script = ExtResource("13_ycdy4")
+npc_scene = ExtResource("14_w48qg")
+spawn_position = NodePath("../WalkStart")
+first_target_position = NodePath("../WalkStop")
+formation_start_position = NodePath("../FormationStart")
+
+[node name="WalkStart" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2, -6)
+
+[node name="WalkStop" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 0)
+
+[node name="FormationStart" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 2, 6)
