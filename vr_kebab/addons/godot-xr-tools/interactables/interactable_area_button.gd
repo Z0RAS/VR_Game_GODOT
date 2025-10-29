@@ -66,6 +66,7 @@ func _ready():
 # Called when an area or body enters the button area
 func _on_button_entered(item: Node3D) -> void:
 	# Add to the dictionary of trigger items
+	print("Iėjo")
 	_trigger_items[item] = item
 
 	# Detect transition to pressed

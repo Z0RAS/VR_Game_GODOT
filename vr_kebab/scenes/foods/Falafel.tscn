@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bpahxy24ocofs" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="4_71oe6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
+size = Vector3(0.395, 0.4, 0.455)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tst6u"]
 albedo_color = Color(0.9520734, 0.4758026, 0.6430417, 1)
@@ -41,6 +42,7 @@ skeleton = NodePath("../..")
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("3_ngg8p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019514427, 0.056116268, 0.0024041422)
+visible = false
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="."]
 script = ExtResource("4_71oe6")

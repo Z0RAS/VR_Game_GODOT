@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bpahxy24ocofs" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="4_apll4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
+size = Vector3(1, 0.5953369, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ha44g"]
 albedo_color = Color(0.62410945, 0.3325676, 0.21622375, 1)
@@ -65,7 +66,7 @@ script = ExtResource("1_j2d5j")
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.035212755, 0, 0.026040161)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.035212755, -0.003967284, 0.026040161)
 shape = SubResource("BoxShape3D_a2kvu")
 
 [node name="ItemMesh" type="MeshInstance3D" parent="."]
