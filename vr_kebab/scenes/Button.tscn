@@ -1,20 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmrwwufgg8ndm"]
+[gd_scene load_steps=5 format=3 uid="uid://dmrwwufgg8ndm"]
 
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="1_1xt0e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xt0e"]
+resource_local_to_scene = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_ywcaw"]
+resource_local_to_scene = true
+size = Vector3(0.2, 0.2, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rtit6"]
 size = Vector3(0.2, 0.2, 0.2)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ywcaw"]
-size = Vector3(0.2, 0.2, 0.2)
-
-[node name="Button" type="Node3D"]
+[node name="MeshInstance3D" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_1xt0e")
+mesh = SubResource("BoxMesh_ywcaw")
 
 [node name="InteractableAreaButton" parent="." instance=ExtResource("1_1xt0e")]
-button = NodePath("../MeshInstance3D")
+collision_layer = 131072
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableAreaButton"]
 shape = SubResource("BoxShape3D_rtit6")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_ywcaw")

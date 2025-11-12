@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://balta7jpa70ks"]
+[gd_scene load_steps=62 format=3 uid="uid://balta7jpa70ks"]
 
 [ext_resource type="Script" uid="uid://dlhnfmp6sue4g" path="res://scripts/VR.gd" id="1_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://bpdj5njb8nhot" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_fullglove_hand.tscn" id="2_muem4"]
@@ -6,60 +6,78 @@
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="4_0ld40"]
 [ext_resource type="PackedScene" uid="uid://fiul51tsyoop" path="res://addons/godot-xr-tools/functions/function_teleport.tscn" id="5_gqmmt"]
-[ext_resource type="Material" uid="uid://f2uhcqq8s2jx" path="res://addons/godot-xr-tools/hands/materials/glove_caucasian_green_camo.tres" id="6_vxglm"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="6_yc10j"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="7_jscy8"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="8_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="8_y6deb"]
-[ext_resource type="Shader" uid="uid://bvrrt62ulacqa" path="res://shaders/TextureRepetition.gdshader" id="9_y6deb"]
 [ext_resource type="Texture2D" uid="uid://bqpwm68sgvfk6" path="res://textures/BrickFloor.jpg" id="10_og1vs"]
-[ext_resource type="PackedScene" uid="uid://yrg5yt0yvc1q" path="res://addons/godot-xr-tools/hands/scenes/collision/collision_hand.tscn" id="11_2f3dj"]
-[ext_resource type="PackedScene" uid="uid://dmrwwufgg8ndm" path="res://scenes/Button.tscn" id="11_vxglm"]
+[ext_resource type="Texture2D" uid="uid://lol8raindrx3" path="res://textures/sky_31_2k.png" id="12_5q0nq"]
+[ext_resource type="Texture2D" uid="uid://cd460vq70bekd" path="res://textures/cellFloor.webp" id="12_vxglm"]
+[ext_resource type="Texture2D" uid="uid://bdjs37oiesfmg" path="res://textures/road.jpg" id="13_vxglm"]
 [ext_resource type="Texture2D" uid="uid://cgx4acunx4ypj" path="res://textures/kitchenLayout.jpg" id="15_fv21b"]
+[ext_resource type="Texture2D" uid="uid://boowqjeurw2fp" path="res://models/Greenery/cartoon_tree_0.png" id="15_qkpxi"]
 [ext_resource type="Texture2D" uid="uid://ney4oe5e0ria" path="res://textures/Texturelabs_Brick_172M.jpg" id="16_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://cio30ikipw4qq" path="res://scenes/Kebab.tscn" id="17_muem4"]
 [ext_resource type="Texture2D" uid="uid://oyjaca2qrme5" path="res://textures/Texturelabs_Wood_267M.jpg" id="17_y6deb"]
 [ext_resource type="PackedScene" uid="uid://jt0m3uudxduh" path="res://scenes/Counter.tscn" id="18_dp3eg"]
 [ext_resource type="Texture2D" uid="uid://cpa7rthelc6tj" path="res://textures/Texturelabs_Metal_278M.jpg" id="21_og1vs"]
 [ext_resource type="Texture2D" uid="uid://2revot6lol3w" path="res://textures/Texturelabs_Brick_128M.jpg" id="21_pm3ni"]
-[ext_resource type="Texture2D" uid="uid://cm7rls1u4a0bl" path="res://textures/trees.png" id="23_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://dsntq6120767d" path="res://scenes/counter2.tscn" id="23_y6deb"]
 [ext_resource type="PackedScene" uid="uid://838q43q017ym" path="res://scenes/foods/Chicken.tscn" id="24_og1vs"]
 [ext_resource type="PackedScene" uid="uid://c78jhsnnevwqh" path="res://scenes/foods/Beef.tscn" id="26_2wyq8"]
+[ext_resource type="PackedScene" uid="uid://qjxqj3r0vbaq" path="res://models/Buildings/simple_building.glb" id="27_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://c18jq42agu64l" path="res://scenes/foods/Lamb.tscn" id="27_vxglm"]
 [ext_resource type="PackedScene" uid="uid://tlqibspo3o4a" path="res://scenes/foods/Falafel.tscn" id="28_2f3dj"]
+[ext_resource type="Script" uid="uid://lio0guytdh3k" path="res://scripts/CarDrive.gd" id="28_fv21b"]
+[ext_resource type="PackedScene" uid="uid://b5kch8u4akc6i" path="res://scenes/OrderTerminal.tscn" id="28_yq6so"]
+[ext_resource type="PackedScene" uid="uid://btj4okjdx0bt1" path="res://scenes/Car.tscn" id="29_yq6so"]
+[ext_resource type="PackedScene" uid="uid://bej1tdlu1jfc7" path="res://models/Greenery/cartoon_tree.glb" id="31_5q0nq"]
+[ext_resource type="PackedScene" uid="uid://gtwr430joohi" path="res://models/Greenery/cartoonish_bush.glb" id="32_dgi5k"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
-ground_bottom_color = Color(0.64705884, 0.654902, 0.67058825, 1)
-ground_horizon_color = Color(0.64705884, 0.654902, 0.67058825, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dgi5k"]
+panorama = ExtResource("12_5q0nq")
 
 [sub_resource type="Sky" id="Sky_noarx"]
-sky_material = SubResource("ProceduralSkyMaterial_a202f")
+sky_material = SubResource("PanoramaSkyMaterial_dgi5k")
 
 [sub_resource type="Environment" id="Environment_a0tk4"]
 background_mode = 2
 sky = SubResource("Sky_noarx")
+ambient_light_source = 2
+ambient_light_color = Color(0.6542321, 0.6542321, 0.654232, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
 size = Vector3(20, 0.1, 5)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_yaehf"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yaehf"]
-noise = SubResource("FastNoiseLite_yaehf")
-seamless = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_074og"]
-render_priority = 0
-shader = ExtResource("9_y6deb")
-shader_parameter/albedo_tex = ExtResource("10_og1vs")
-shader_parameter/macro_noise_tex = SubResource("NoiseTexture2D_yaehf")
-shader_parameter/triplanar_scale = 0.40000001574012
-shader_parameter/noise_strength = 0.70400003344
-shader_parameter/macro_scale = 0.1
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkpxi"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("12_vxglm")
+normal_enabled = true
+normal_texture = ExtResource("10_og1vs")
+uv1_scale = Vector3(20, 10, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
-size = Vector3(20, 0.1, 5)
+size = Vector3(20, 0.1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgi5k"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("13_vxglm")
+normal_enabled = true
+normal_scale = -0.81
+normal_texture = ExtResource("10_og1vs")
+uv1_scale = Vector3(20, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j8jky"]
+size = Vector3(20, 0.1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8jky"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("15_qkpxi")
+normal_enabled = true
+uv1_scale = Vector3(20, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kmb1v"]
+size = Vector3(30, 0.1, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_074og"]
 albedo_texture = ExtResource("15_fv21b")
@@ -120,30 +138,38 @@ size = Vector3(3, 1, 0.3)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0odxb"]
 size = Vector3(3, 1, 0.3)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgi5k"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-cull_mode = 2
-depth_draw_mode = 2
-albedo_texture = ExtResource("23_2wyq8")
-uv1_scale = Vector3(4, 1, 1)
-texture_filter = 5
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_y6deb"]
-size = Vector2(20, 5)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_kmb1v"]
 size = Vector3(20, 5, 0.3)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_2wyq8"]
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_jbj1t")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("27_2f3dj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1141677, 0.063100815, -9.272939)
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("27_2f3dj")]
+transform = Transform3D(-1, 0, 3.821371e-15, 0, 1, -8.742278e-08, -3.821371e-15, -8.742278e-08, -1, 2.9772806, 0.063100815, -1.0038276)
+
+[node name="Sketchfab_Scene5" parent="." instance=ExtResource("27_2f3dj")]
+transform = Transform3D(-1, 0, 3.821371e-15, 0, 1, -8.742278e-08, -3.821371e-15, -8.742278e-08, -1, 9.337372, 0.063100815, -1.0038276)
+
+[node name="Sketchfab_Scene6" parent="." instance=ExtResource("27_2f3dj")]
+transform = Transform3D(-1, 0, 3.821371e-15, 0, 1, -8.742278e-08, -3.821371e-15, -8.742278e-08, -1, 16.088125, 0.06310105, -1.0038276)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("27_2f3dj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.695152, 0.063100815, -9.272939)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("27_2f3dj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.04455, 0.06310105, -9.272939)
 
 [node name="Player" type="XROrigin3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5188818, 0.2946105, -4.6137877)
 
 [node name="XRCamera3D" type="XRCamera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+visible = false
 
 [node name="LeftHand" type="XRController3D" parent="Player" groups=["hands"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
@@ -167,7 +193,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 
 [node name="RightHand" parent="Player/RightHand" instance=ExtResource("4_0ld40")]
-hand_material_override = ExtResource("6_vxglm")
 
 [node name="FunctionTeleport" parent="Player/RightHand" instance=ExtResource("5_gqmmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.32, 0, 0, 0)
@@ -175,6 +200,7 @@ enabled = false
 player_height = 0.4
 
 [node name="FunctionPickup" parent="Player/RightHand" instance=ExtResource("3_dp3eg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008641481, 0)
 grab_distance = 0.1
 
 [node name="MovementDirect" parent="Player/RightHand" instance=ExtResource("6_yc10j")]
@@ -186,8 +212,6 @@ smooth_turn_speed = 4.0
 [node name="FunctionPointer" parent="Player/RightHand" instance=ExtResource("8_y6deb")]
 show_target = true
 collide_with_areas = true
-
-[node name="XRToolsCollisionHand" parent="Player/RightHand" instance=ExtResource("11_2f3dj")]
 
 [node name="PlayerBody" parent="Player" instance=ExtResource("8_pm3ni")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.154843e-07, 0.2946105, -7.2174397)
@@ -209,21 +233,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0871744, 0, 0)
 shape = SubResource("BoxShape3D_272bh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0871744, -0.027460098, -0.026402473)
-material_override = SubResource("ShaderMaterial_074og")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0676117, -0.029036283, -0.01715517)
+material_override = SubResource("StandardMaterial3D_qkpxi")
 mesh = SubResource("BoxMesh_5vw27")
 
-[node name="Ground2" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.505741, 0, -7.7837234)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.928213, -0.029036283, -0.017155824)
+material_override = SubResource("StandardMaterial3D_dgi5k")
+mesh = SubResource("BoxMesh_j8jky")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0871744, 0, 0)
-shape = SubResource("BoxShape3D_272bh")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0871744, -0.027460098, -0.026402473)
-material_override = SubResource("ShaderMaterial_074og")
-mesh = SubResource("BoxMesh_5vw27")
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.565233, -0.07148051, -0.017155983)
+material_override = SubResource("StandardMaterial3D_j8jky")
+mesh = SubResource("BoxMesh_kmb1v")
 
 [node name="FloorBlueprint" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.4, 0, -5)
@@ -332,38 +354,90 @@ shape = SubResource("BoxShape3D_0odxb")
 [node name="Trees2" type="StaticBody3D" parent="Outside"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, -7)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Outside/Trees2"]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_dgi5k")
-mesh = SubResource("PlaneMesh_y6deb")
-skeleton = NodePath("../..")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outside/Trees2"]
 shape = SubResource("BoxShape3D_kmb1v")
 
 [node name="Trees3" type="StaticBody3D" parent="Outside"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, -3)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Outside/Trees3"]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_dgi5k")
-mesh = SubResource("PlaneMesh_y6deb")
-skeleton = NodePath("../..")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outside/Trees3"]
 shape = SubResource("BoxShape3D_kmb1v")
 
-[node name="Trees4" type="StaticBody3D" parent="Outside"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.895826, 2, -5.847697)
+[node name="OrderTerminal" parent="." instance=ExtResource("28_yq6so")]
+transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, -0.022964299, 1.5593586, -5.5332828)
+label_3d_path = NodePath("../MeshInstance3D/Label3D")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Outside/Trees4"]
-transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_dgi5k")
-mesh = SubResource("PlaneMesh_y6deb")
-skeleton = NodePath("../..")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.9885666, 2.8212857, -4.8916264)
+visible = false
+mesh = SubResource("PlaneMesh_2wyq8")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Outside/Trees4"]
-shape = SubResource("BoxShape3D_kmb1v")
+[node name="Label3D" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 0.54880667, 0.017737007, -0.2852192)
+text = "SW"
 
-[node name="Button" parent="." instance=ExtResource("11_vxglm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10891551, 1.6215744, -5.3830347)
+[node name="CarPaths" type="Node3D" parent="." node_paths=PackedStringArray("start_points", "end_points")]
+script = ExtResource("28_fv21b")
+car_scene = ExtResource("29_yq6so")
+start_points = [NodePath("Start1"), NodePath("Start2"), NodePath("Start3"), NodePath("Start4"), NodePath("Start5")]
+end_points = [NodePath("End1"), NodePath("End2"), NodePath("End3"), NodePath("End4"), NodePath("End5")]
+
+[node name="Start1" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1.1, 4)
+
+[node name="Start2" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1.1, 4.273)
+
+[node name="Start3" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1.1, 4.273)
+
+[node name="Start4" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1.1, 4.273)
+
+[node name="Start5" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.1, 4.273)
+
+[node name="End1" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1.1, -14)
+
+[node name="End2" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1.1, -14)
+
+[node name="End3" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1.1, -14)
+
+[node name="End4" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1.1, -14)
+
+[node name="End5" type="Node3D" parent="CarPaths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.1, -14)
+
+[node name="Plants" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.8851, 0, 0)
+
+[node name="Sketchfab_Scene" parent="Plants" instance=ExtResource("31_5q0nq")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 2.6423311, -2.8246884)
+
+[node name="Sketchfab_Scene8" parent="Plants" instance=ExtResource("31_5q0nq")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 2.9662209, 3.042265, -5.9442782)
+
+[node name="Sketchfab_Scene9" parent="Plants" instance=ExtResource("31_5q0nq")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 2.9662209, 3.042265, 0.99373674)
+
+[node name="Sketchfab_Scene7" parent="Plants" instance=ExtResource("31_5q0nq")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -1.2305737, 2.642169, 5.6031823)
+
+[node name="Sketchfab_Scene5" parent="Plants" instance=ExtResource("31_5q0nq")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 2.6423311, -8.365614)
+
+[node name="Sketchfab_Scene2" parent="Plants" instance=ExtResource("32_dgi5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3187141, 0.98442984, -8.543524)
+
+[node name="Sketchfab_Scene6" parent="Plants" instance=ExtResource("32_dgi5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577789, 0.98442984, -5.2655096)
+
+[node name="Sketchfab_Scene3" parent="Plants" instance=ExtResource("32_dgi5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7696457, 0.98442984, 0.25929165)
+
+[node name="Sketchfab_Scene4" parent="Plants" instance=ExtResource("32_dgi5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2678947, 0.98442984, -13.718803)

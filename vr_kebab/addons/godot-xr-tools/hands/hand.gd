@@ -34,6 +34,10 @@ signal hand_scale_changed(scale)
 @export var trigger_action : String = "trigger"
 
 
+# Rankos Area3D, kurią norim įjungti/išjungti
+@export var hand_area_node: NodePath
+@onready var hand_area: Area3D = get_node_or_null(hand_area_node)
+
 ## Last world scale (for scaling hands)
 var _last_world_scale : float = 1.0
 
@@ -116,7 +120,8 @@ func _ready() -> void:
 	# Save the initial hand transform
 	_initial_transform = transform
 	_transform = _initial_transform
-
+	if hand_area:
+		_disable_hand_area()
 	# Disconnect from parent transform as we move to it in the physics step,
 	# and boost the physics priority after any grab-drivers but before other
 	# processing.
@@ -147,6 +152,8 @@ func _physics_process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 
+	if not _controller:
+			return
 	# Scale the hand mesh with the world scale.
 	if XRServer.world_scale != _last_world_scale:
 		_last_world_scale = XRServer.world_scale
@@ -157,7 +164,8 @@ func _physics_process(_delta: float) -> void:
 	if _controller:
 		var grip : float = _controller.get_float(grip_action)
 		var trigger : float = _controller.get_float(trigger_action)
-
+		if hand_area:
+			_set_hand_area_active(grip > 0.5)
 		# Allow overriding of grip and trigger
 		if _force_grip >= 0.0: grip = _force_grip
 		if _force_trigger >= 0.0: trigger = _force_trigger
@@ -475,3 +483,29 @@ static func _find_child(node : Node, type : String) -> Node:
 
 	# No child found matching type
 	return null
+
+func _disable_hand_area():
+	hand_area.set_physics_process(false)
+	if hand_area.has_method("set_monitoring"):
+		hand_area.set_monitoring(false)
+	if hand_area.has_method("set_visible"):
+		hand_area.visible = false
+
+	for child in hand_area.get_children():
+		if child is CollisionShape3D:
+			child.disabled = true
+		elif child.has_method("set_visible"):
+			child.visible = false
+
+func _set_hand_area_active(active: bool):
+	hand_area.set_physics_process(active)
+	if hand_area.has_method("set_monitoring"):
+		hand_area.set_monitoring(active)
+	if hand_area.has_method("set_visible"):
+		hand_area.visible = active
+
+	for child in hand_area.get_children():
+		if child is CollisionShape3D:
+			child.disabled = not active
+		elif child.has_method("set_visible"):
+			child.visible = active

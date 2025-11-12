@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://btj4okjdx0bt1"]
+
+[ext_resource type="Texture2D" uid="uid://dawew2ftroah7" path="res://textures/car_red.png" id="1_7u4s5"]
+
+[node name="Node3D" type="Sprite3D"]
+transform = Transform3D(-2.6226834e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.6226834e-08, 0, 0, 0)
+alpha_antialiasing_mode = 1
+texture = ExtResource("1_7u4s5")
