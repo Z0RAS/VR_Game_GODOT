@@ -1,10 +1,10 @@
-[gd_scene load_steps=36 format=3 uid="uid://b5kch8u4akc6i"]
+[gd_scene load_steps=37 format=3 uid="uid://b5kch8u4akc6i"]
 
 [ext_resource type="Script" uid="uid://bbgjp7dcirqth" path="res://scripts/order_terminal.gd" id="1_2xjl1"]
 [ext_resource type="PackedScene" uid="uid://dmrwwufgg8ndm" path="res://scenes/Button.tscn" id="2_n5k12"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_d5o8v"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("SubViewportContainer/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5o8v"]
 albedo_color = Color(0, 0, 0, 1)
@@ -104,9 +104,6 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_0d5ls"]
 size = Vector3(2, 0.2, 1.2)
 
-[sub_resource type="LabelSettings" id="LabelSettings_d5o8v"]
-font_size = 32
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_05qmx"]
 albedo_color = Color(0.35906908, 0.35906908, 0.35906908, 1)
 
@@ -118,12 +115,20 @@ albedo_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_q31j5"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_d5o8v"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_2xjl1"]
+font_size = 64
+font_color = Color(0, 0.66, 0.37399998, 1)
+
 [node name="OrderTerminal" type="Node3D"]
 script = ExtResource("1_2xjl1")
 button_paths = Array[NodePath]([NodePath("Buttons/Button"), NodePath("Buttons/Button2"), NodePath("Buttons/Button3"), NodePath("Buttons/Button4"), NodePath("Buttons/Button5"), NodePath("Buttons/Button6"), NodePath("Buttons/Button7"), NodePath("Buttons/Button8"), NodePath("Buttons/Button9")])
 confirm_button_path = NodePath("Buttons/ButtonConfirm")
 delete_button_path = NodePath("Buttons/ButtonDelete")
-terminal_viewport_path = NodePath("SubViewport")
+terminal_viewport_path = NodePath("SubViewportContainer/SubViewport")
+money_label_path = NodePath("SubViewportContainer/SubViewport/Control/Money")
 
 [node name="Screen" type="Node3D" parent="."]
 
@@ -196,15 +201,6 @@ mesh = SubResource("BoxMesh_0d5ls")
 
 [node name="Node" type="Node3D" parent="."]
 
-[node name="SubViewport" type="SubViewport" parent="."]
-transparent_bg = true
-
-[node name="Label" type="Label" parent="SubViewport"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Zdarova"
-label_settings = SubResource("LabelSettings_d5o8v")
-
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5095773)
 material_override = SubResource("StandardMaterial3D_05qmx")
@@ -214,3 +210,46 @@ mesh = SubResource("BoxMesh_8w48x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.7302288)
 material_override = SubResource("StandardMaterial3D_ac7py")
 mesh = SubResource("BoxMesh_q31j5")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Control" type="Control" parent="SubViewportContainer/SubViewport"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Zdarova"
+label_settings = SubResource("LabelSettings_d5o8v")
+
+[node name="Money" type="Label" parent="SubViewportContainer/SubViewport/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "$0"
+label_settings = SubResource("LabelSettings_2xjl1")
+horizontal_alignment = 2
+vertical_alignment = 2

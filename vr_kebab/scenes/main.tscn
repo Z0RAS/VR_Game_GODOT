@@ -348,6 +348,7 @@ shape = SubResource("BoxShape3D_kmb1v")
 [node name="OrderTerminal" parent="." instance=ExtResource("28_yq6so")]
 transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, -0.022964299, 1.5593586, -5.5332828)
 label_3d_path = NodePath("../MeshInstance3D/Label3D")
+mesh_to_hide_path = NodePath("../MeshInstance3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.9885666, 2.8212857, -4.8916264)
