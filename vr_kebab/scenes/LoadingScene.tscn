@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cypfqarxeetlf"]
+
+[ext_resource type="Script" uid="uid://ibjwtii1v506" path="res://scripts/loading_scene.gd" id="1_0tklf"]
+
+[node name="Node3D" type="XROrigin3D"]
+script = ExtResource("1_0tklf")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+
+[node name="Label3D" type="Label3D" parent="XRCamera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5831305)
+billboard = 1
+text = "LOADINGAS"

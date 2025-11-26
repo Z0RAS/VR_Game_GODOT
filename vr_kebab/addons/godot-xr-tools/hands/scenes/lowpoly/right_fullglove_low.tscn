@@ -13,34 +13,34 @@
 script = ExtResource("3_q2uyk")
 metadata/_custom_type_script = "uid://bs5s4h0jby5nq"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_swmod"]
-animation = &"Grip"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vq0yy"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_65tsc"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_65tsc"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_t1cog"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t1cog"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xdmiy"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_xdmiy"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_6rsg1"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_6rsg1"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_usbux"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_swmod")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_vq0yy")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_vq0yy")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_65tsc")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_65tsc")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_t1cog")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_t1cog")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_xdmiy")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_xdmiy")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_6rsg1")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
@@ -85,19 +85,22 @@ surface_material_override/0 = ExtResource("3")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 root_node = NodePath("../Hand_low_R")
-tree_root = SubResource("AnimationNodeBlendTree_6rsg1")
+tree_root = SubResource("AnimationNodeBlendTree_usbux")
 anim_player = NodePath("../Hand_low_R/AnimationPlayer")
 parameters/Grip/blend_amount = 1.0
 parameters/Trigger/blend_amount = 0.0
 
 [node name="HandZone" type="Area3D" parent="."]
+visible = false
 collision_layer = 131072
 collision_mask = 131072
+monitoring = false
 script = ExtResource("8_vq0yy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HandZone"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.012307114, 0.0012891274)
 shape = SubResource("BoxShape3D_65tsc")
+disabled = true
 debug_color = Color(0, 0.6196533, 0.720634, 1)
 
 [editable path="Hand_low_R"]

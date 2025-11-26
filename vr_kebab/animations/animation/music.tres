@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://b5fy368hceplj"]
+
+[ext_resource type="Texture2D" uid="uid://dlikhaykms1cy" path="res://animations/sprites/music_noBack.png" id="1_r1myg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fqbi"]
+atlas = ExtResource("1_r1myg")
+region = Rect2(0, 0, 226, 223)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obgmb"]
+atlas = ExtResource("1_r1myg")
+region = Rect2(226, 0, 226, 223)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3hot"]
+atlas = ExtResource("1_r1myg")
+region = Rect2(452, 0, 226, 223)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egenp"]
+atlas = ExtResource("1_r1myg")
+region = Rect2(678, 0, 226, 223)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fqbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obgmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3hot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egenp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

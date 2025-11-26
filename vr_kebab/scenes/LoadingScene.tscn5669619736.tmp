@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cypfqarxeetlf"]
+
+[ext_resource type="Script" uid="uid://ibjwtii1v506" path="res://scenes/loading_scene.gd" id="1_0tklf"]
+
+[node name="Node3D" type="XROrigin3D"]
+script = ExtResource("1_0tklf")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+
+[node name="LoadingScreen3D" type="Node3D" parent="XRCamera3D"]
+
+[node name="Label3D" type="Label3D" parent="XRCamera3D/LoadingScreen3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.45094717)
+pixel_size = 0.001
+text = "Sveiki"
+font_size = 128

@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnne2r3251ibm"]
+
+[ext_resource type="Script" uid="uid://6w5ofnje0sh1" path="res://scripts/upgrades_ui.gd" id="1_vey62"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rybl3"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_vey62"]
+font_size = 32
+font_color = Color(0.051031396, 0.8065556, 0.3966482, 1)
+
+[node name="Node2D" type="CanvasLayer"]
+script = ExtResource("1_vey62")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.95686275, 0.95686275, 0.95686275, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.33996582
+offset_bottom = -0.07501221
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Patobulinimai"
+label_settings = SubResource("LabelSettings_rybl3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Laikas + 10s "
+label_settings = SubResource("LabelSettings_vey62")
+
+[node name="Button" type="Button" parent="Control/ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "1$"
+alignment = 2
