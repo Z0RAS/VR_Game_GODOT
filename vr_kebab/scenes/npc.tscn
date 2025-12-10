@@ -1,21 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlty1cgw780sy"]
+[gd_scene load_steps=2 format=3 uid="uid://dlty1cgw780sy"]
 
-[ext_resource type="Texture2D" uid="uid://dlsidrkafxko7" path="res://textures/normal_Goku.png" id="1_nh2m4"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abqhh"]
-transparency = 1
-cull_mode = 2
-shading_mode = 0
-albedo_texture = ExtResource("1_nh2m4")
-uv1_triplanar_sharpness = 150.0
-texture_repeat = false
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_nh2m4"]
-size = Vector2(1, 2)
+[ext_resource type="PackedScene" uid="uid://c1o586q1p8rkp" path="res://models/npc/npc_model.tscn" id="1_nh2m4"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_abqhh")
-mesh = SubResource("PlaneMesh_nh2m4")
+[node name="WobblePivot" type="Node3D" parent="."]
+
+[node name="Skeleton3D" parent="WobblePivot" instance=ExtResource("1_nh2m4")]
+transform = Transform3D(0.014, 0, 0, 0, 0.014, -3.1086246e-18, 0, 3.1086246e-18, 0.014, 0, 0, 0)

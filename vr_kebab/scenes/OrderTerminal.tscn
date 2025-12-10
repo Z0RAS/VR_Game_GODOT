@@ -187,11 +187,22 @@ script = ExtResource("1_2xjl1")
 button_paths = Array[NodePath]([NodePath("Buttons/Button"), NodePath("Buttons/Button2"), NodePath("Buttons/Button3"), NodePath("Buttons/Button4"), NodePath("Buttons/Button5"), NodePath("Buttons/Button6"), NodePath("Buttons/Button7"), NodePath("Buttons/Button8"), NodePath("Buttons/Button9")])
 confirm_button_path = NodePath("Buttons/ButtonConfirm")
 delete_button_path = NodePath("Buttons/ButtonDelete")
+label_3d_path = null
 terminal_viewport_path = NodePath("SubViewportContainer/SubViewport")
 money_label_path = NodePath("SubViewportContainer/SubViewport/Control/Money")
+mesh_to_hide_path = null
 timer_path = NodePath("SubViewportContainer/SubViewport/Control/Control")
+watched_door_path = null
+npc_spawn_point_path = null
+counter_point_path = null
 npc_scene = ExtResource("2_be764")
+cooldown_time = null
+exit_point_path = null
 timer_label_path = NodePath("SubViewportContainer/SubViewport/Control/Control")
+corner_entry_point_path = null
+corner_exit_point_path = null
+product_scenes = null
+product_spawn_points = null
 
 [node name="Screen" type="Node3D" parent="."]
 

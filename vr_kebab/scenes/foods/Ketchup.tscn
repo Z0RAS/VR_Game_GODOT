@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=4 uid="uid://cj6bcf7qtwjbr"]
+
+[ext_resource type="Script" uid="uid://uv2nmfekdmyy" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_688w7"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="2_y8pdl"]
+[ext_resource type="Script" uid="uid://bpahxy24ocofs" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="3_4dv6v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
+size = Vector3(1, 0.21117187, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbepj"]
+albedo_color = Color(0.757474, 0.19213995, 0.2735312, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_loalr"]
+material = SubResource("StandardMaterial3D_cbepj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c0qa3"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4lhy8"]
+_surfaces = [{
+"aabb": AABB(-0.5057735, -0.5057735, -0.5057735, 1.011547, 1.011547, 1.011547),
+"attribute_data": PackedByteArray("AAAAAAAAAACrqio/AAAAAKuqqj4AAAAAAACAPwAAAAAAAAAAAAAAP6uqKj8AAAA/q6qqPgAAAD8AAIA/AAAAP6uqqj4AAAAAAAAAAAAAAD+rqio/AAAAAKuqqj4AAAA/q6qqPgAAAD8AAAAAAACAP6uqKj8AAAA/q6qqPgAAgD+rqqo+AAAAP6uqKj8AAAA/q6oqPwAAAD8AAIA/AAAAP6uqqj4AAIA/q6oqPwAAgD+rqio/AACAPwAAgD8AAIA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAAEAAIAAgAEAAYAAQAFAAMAAwAFAAcACAAMAAoACgAMAA4ACQANAAsACwANAA8AEAAUABIAEgAUABYAEQAVABMAEwAVABcA"),
+"material": SubResource("StandardMaterial3D_c0qa3"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("X3oBv196AT9fegE/X3oBP196AT9fegG/X3oBP196AT9fegE/X3oBv196AT9fegG/X3oBv196Ab9fegE/X3oBP196Ab9fegG/X3oBP196Ab9fegE/X3oBv196Ab9fegG/X3oBP196AT9fegE/X3oBv196AT9fegG/X3oBP196AT9fegG/X3oBv196AT9fegE/X3oBP196Ab9fegE/X3oBv196Ab9fegG/X3oBP196Ab9fegG/X3oBv196Ab9fegE/X3oBP196AT9fegE/X3oBv196Ab9fegE/X3oBv196AT9fegE/X3oBP196Ab9fegE/X3oBP196AT9fegG/X3oBv196Ab9fegG/X3oBv196AT9fegG/X3oBP196Ab9fegG//3//f////7//////AAD/v/9//3////+//////wAA/7//f/9/////v/////8AAP+//3//f////7//////AAD/v///AID/////AAAAgP9//7///wCA/////wAAAID/f/+///8AgP////8AAACA/3//v///AID/////AAAAgP9//78AgP//AAD/vwCAAAD///+/AID//wAA/78AgAAA////vwCA//8AAP+/AIAAAP///78AgP//AAD/vwCAAAD///+/")
+}]
+
+[node name="Ketchup" type="RigidBody3D" groups=["Padažas2"]]
+collision_layer = 4
+collision_mask = 196615
+freeze_mode = 1
+script = ExtResource("1_688w7")
+metadata/_custom_type_script = "uid://uv2nmfekdmyy"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.035212755, -0.006617188, 0.048469998)
+shape = SubResource("BoxShape3D_a2kvu")
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("2_y8pdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07525045, 0.056116268, 0.0024041422)
+visible = false
+
+[node name="XRToolsHighlightVisible" type="Node3D" parent="."]
+script = ExtResource("3_4dv6v")
+metadata/_custom_type_script = "uid://bpahxy24ocofs"
+
+[node name="ItemLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+visible = false
+pixel_size = 0.0004
+texture_filter = 0
+text = "Sveiki"
+font_size = 60
+outline_size = 16
+
+[node name="Beef" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, -0.035212755, 0, 0.026040161)
+mesh = SubResource("BoxMesh_loalr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Beef"]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+mesh = SubResource("ArrayMesh_4lhy8")

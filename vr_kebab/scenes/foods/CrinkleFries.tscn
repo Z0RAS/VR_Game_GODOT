@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2ebtpebiy6ox"]
+
+[ext_resource type="Script" uid="uid://uv2nmfekdmyy" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_q7jtf"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="2_72a1m"]
+[ext_resource type="Script" uid="uid://bpahxy24ocofs" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="3_5fkek"]
+[ext_resource type="PackedScene" uid="uid://bxdgasr2yvb2h" path="res://scenes/CrinkleFriesModel.tscn" id="4_q7jtf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
+size = Vector3(0.07243653, 0.1, 0.06589355)
+
+[node name="PickableObject" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 196615
+freeze_mode = 1
+script = ExtResource("1_q7jtf")
+metadata/_custom_type_script = "uid://uv2nmfekdmyy"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.75987643, 0, 0, 0, 1, 0.018493656, -0.010875724, -0.011486813)
+shape = SubResource("BoxShape3D_a2kvu")
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("2_72a1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041183606, 0, -0.057213448)
+visible = false
+
+[node name="XRToolsHighlightVisible" type="Node3D" parent="."]
+script = ExtResource("3_5fkek")
+metadata/_custom_type_script = "uid://bpahxy24ocofs"
+
+[node name="Fries" parent="." instance=ExtResource("4_q7jtf")]

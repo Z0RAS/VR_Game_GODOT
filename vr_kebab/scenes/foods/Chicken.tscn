@@ -65,7 +65,7 @@ freeze_mode = 1
 script = ExtResource("1_j2d5j")
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Mėsa3"]]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.035212755, -0.003967284, 0.026040161)
 shape = SubResource("BoxShape3D_a2kvu")
 

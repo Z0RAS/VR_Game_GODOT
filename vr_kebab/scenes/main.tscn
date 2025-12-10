@@ -1,10 +1,12 @@
-[gd_scene load_steps=96 format=4 uid="uid://balta7jpa70ks"]
+[gd_scene load_steps=106 format=4 uid="uid://balta7jpa70ks"]
 
+[ext_resource type="Script" uid="uid://b5jqq6v6m8isx" path="res://scenes/main.gd" id="1_c6pm6"]
+[ext_resource type="PackedScene" uid="uid://comtkru161q6j" path="res://scenes/foods/SpecialMeat.tscn" id="2_5he1u"]
 [ext_resource type="Texture2D" uid="uid://bqpwm68sgvfk6" path="res://textures/BrickFloor.jpg" id="10_og1vs"]
 [ext_resource type="Texture2D" uid="uid://lol8raindrx3" path="res://textures/sky_31_2k.png" id="12_5q0nq"]
 [ext_resource type="Texture2D" uid="uid://cd460vq70bekd" path="res://textures/cellFloor.webp" id="12_vxglm"]
 [ext_resource type="Texture2D" uid="uid://bdjs37oiesfmg" path="res://textures/road.jpg" id="13_vxglm"]
-[ext_resource type="PackedScene" uid="uid://dgpoxekof1bkp" path="res://scenes/PotatoGrabbable.tscn" id="14_pibwh"]
+[ext_resource type="PackedScene" uid="uid://dgpoxekof1bkp" path="res://scenes/foods/PotatoGrabbable.tscn" id="14_pibwh"]
 [ext_resource type="Texture2D" uid="uid://boowqjeurw2fp" path="res://models/Greenery/cartoon_tree_0.png" id="15_qkpxi"]
 [ext_resource type="Texture2D" uid="uid://ney4oe5e0ria" path="res://textures/Texturelabs_Brick_172M.jpg" id="16_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://cio30ikipw4qq" path="res://scenes/Kebab.tscn" id="17_muem4"]
@@ -16,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://dynxn7ybvcicq" path="res://textures/arrowUP.png" id="19_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://cuwhs5dtqmjs" path="res://models/Buildings/ceiling_lamp_673.glb" id="20_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="20_5he1u"]
-[ext_resource type="PackedScene" uid="uid://cnne2r3251ibm" path="res://scenes/UpgradesUI.tscn" id="21_5poiv"]
 [ext_resource type="Texture2D" uid="uid://cpa7rthelc6tj" path="res://textures/Texturelabs_Metal_278M.jpg" id="21_og1vs"]
 [ext_resource type="Texture2D" uid="uid://2revot6lol3w" path="res://textures/Texturelabs_Brick_128M.jpg" id="21_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://csqu5k2ew2h7d" path="res://models/Buildings/dove_poster.glb" id="21_qkpxi"]
@@ -37,8 +38,13 @@
 [ext_resource type="PackedScene" uid="uid://btj4okjdx0bt1" path="res://scenes/Car.tscn" id="29_yq6so"]
 [ext_resource type="PackedScene" uid="uid://bej1tdlu1jfc7" path="res://models/Greenery/cartoon_tree.glb" id="31_5q0nq"]
 [ext_resource type="PackedScene" uid="uid://gtwr430joohi" path="res://models/Greenery/cartoonish_bush.glb" id="32_dgi5k"]
+[ext_resource type="PackedScene" uid="uid://d2ebtpebiy6ox" path="res://scenes/foods/CrinkleFries.tscn" id="33_2cjbq"]
+[ext_resource type="PackedScene" uid="uid://crmrfnnv27sm6" path="res://scenes/foods/SweetPotatoGrabbable.tscn" id="34_chjal"]
 [ext_resource type="SpriteFrames" uid="uid://b5fy368hceplj" path="res://animations/animation/music.tres" id="34_j8jky"]
 [ext_resource type="Script" uid="uid://dcn5c8vbp20yt" path="res://scripts/animation_player.gd" id="34_kmb1v"]
+[ext_resource type="PackedScene" uid="uid://cxbwr3vcytqfe" path="res://scenes/foods/HotSauce.tscn" id="35_vchkt"]
+[ext_resource type="PackedScene" uid="uid://cj6bcf7qtwjbr" path="res://scenes/foods/Ketchup.tscn" id="36_txyw0"]
+[ext_resource type="PackedScene" uid="uid://dihbwo7blm0ir" path="res://scenes/foods/GarlicSauce.tscn" id="37_vc5cj"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dgi5k"]
 panorama = ExtResource("12_5q0nq")
@@ -131,6 +137,42 @@ albedo_texture = ExtResource("21_pm3ni")
 uv1_scale = Vector3(0.1, 0.1, 0)
 uv1_offset = Vector3(0, 0.435, 0)
 uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tel4y"]
+albedo_texture = ExtResource("17_y6deb")
+
+[sub_resource type="BoxMesh" id="BoxMesh_1u8w0"]
+size = Vector3(3, 1, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0odxb"]
+size = Vector3(3, 1, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fuf3a"]
+resource_local_to_scene = true
+albedo_color = Color(0.12094482, 0.5779631, 0.51523846, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pibwh"]
+resource_local_to_scene = true
+size = Vector3(0.1, 0.15, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pibwh"]
+transparency = 1
+albedo_texture = ExtResource("19_2wyq8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5he1u"]
+size = Vector2(0.085, 0.135)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6pm6"]
+resource_local_to_scene = true
+albedo_color = Color(0.7912122, 0.17390862, 9.62615e-08, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5he1u"]
+resource_local_to_scene = true
+size = Vector3(0.1, 0.15, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5poiv"]
+transparency = 1
+albedo_texture = ExtResource("19_2wyq8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vchkt"]
 albedo_color = Color(0.62410945, 0.3325676, 0.21622375, 1)
@@ -331,42 +373,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nvyfr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tel4y"]
-albedo_texture = ExtResource("17_y6deb")
-
-[sub_resource type="BoxMesh" id="BoxMesh_1u8w0"]
-size = Vector3(3, 1, 0.3)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_0odxb"]
-size = Vector3(3, 1, 0.3)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fuf3a"]
-resource_local_to_scene = true
-albedo_color = Color(0.12094482, 0.5779631, 0.51523846, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_pibwh"]
-resource_local_to_scene = true
-size = Vector3(0.1, 0.15, 0.1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pibwh"]
-transparency = 1
-albedo_texture = ExtResource("19_2wyq8")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_5he1u"]
-size = Vector2(0.085, 0.135)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6pm6"]
-resource_local_to_scene = true
-albedo_color = Color(0.7912122, 0.17390862, 9.62615e-08, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_5he1u"]
-resource_local_to_scene = true
-size = Vector3(0.1, 0.15, 0.1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5poiv"]
-transparency = 1
-albedo_texture = ExtResource("19_2wyq8")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txyw0"]
 shading_mode = 0
 albedo_color = Color(0.90576285, 0.8176433, 0.35686442, 1)
@@ -388,9 +394,15 @@ albedo_color = Color(0.11902017, 0.4951529, 0.41536504, 0.2509804)
 [sub_resource type="BoxMesh" id="BoxMesh_5q0nq"]
 size = Vector3(0.1, 0.1, 0.1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pibwh"]
+size = Vector3(0.1, 0.1, 0.1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2cjbq"]
 transparency = 1
 albedo_color = Color(0.2627451, 0.4627451, 0.41568628, 0.3529412)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5he1u"]
+size = Vector3(0.1, 0.1, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chjal"]
 transparency = 1
@@ -406,6 +418,9 @@ albedo_color = Color(0.19607843, 0.7294118, 0.50980395, 0.12941177)
 [sub_resource type="BoxMesh" id="BoxMesh_vxglm"]
 size = Vector3(0.5, 0.2, 0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5poiv"]
+size = Vector3(0.5, 0.2, 0.5)
+
 [sub_resource type="BoxMesh" id="BoxMesh_c6pm6"]
 size = Vector3(1, 2, 1)
 
@@ -414,7 +429,14 @@ size = Vector3(1, 2, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_2cjbq"]
 size = Vector3(1, 2, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_cjqg0"]
+
 [node name="Main" type="Node3D"]
+script = ExtResource("1_c6pm6")
+top_cut_zone_path = NodePath("CutZone/TopCutZone/Top")
+bottom_cut_zone_path = NodePath("CutZone/BottomCutZone/Bottom")
+meat_drop_zone_path = NodePath("CutZone/MeatDropZone")
+special_meat_scene = ExtResource("2_5he1u")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_a0tk4")
@@ -521,26 +543,10 @@ shape = SubResource("BoxShape3D_0ld40")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0622652, 1.4202032, -6.0856514)
 
 [node name="Beef" parent="Building/Foods" instance=ExtResource("26_2wyq8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3613235, 1.4818131, -6.0931077)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47246313, 1.4818131, -6.0931077)
 
 [node name="Pork" parent="Building/Foods" instance=ExtResource("27_vxglm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43971354, 1.4484196, -6.078186)
-
-[node name="ChickenFloat" type="MeshInstance3D" parent="Building/Foods"]
-transform = Transform3D(-0.003886505, 0.08991604, -4.1909516e-09, 0.0071970928, 0.00031108927, 0.08971121, 0.08962754, 0.0038740365, -0.0072038136, -2.1273053, 3.0917277, -6.088454)
-material_override = SubResource("StandardMaterial3D_vchkt")
-mesh = SubResource("ArrayMesh_txyw0")
-skeleton = NodePath("../Chicken")
-
-[node name="BeefFloat" type="MeshInstance3D" parent="Building/Foods"]
-transform = Transform3D(0.18963258, -0.063556924, 0, 0.06254398, 0.1866103, 0.035564646, -0.011301898, -0.033721086, 0.19681251, -1.2674205, 3.0623648, -6.111912)
-mesh = SubResource("ArrayMesh_vc5cj")
-skeleton = NodePath("../Beef")
-
-[node name="PorkFloat" type="MeshInstance3D" parent="Building/Foods"]
-transform = Transform3D(0.2, 0, 0, 0, 0.19971278, -0.010714691, 0, 0.010714691, 0.19971278, -0.55384374, 3.0493968, -6.149005)
-mesh = SubResource("ArrayMesh_ty1g6")
-skeleton = NodePath("../Pork")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2061268, 1.4484196, -6.078186)
 
 [node name="Potato" parent="Building/Foods" instance=ExtResource("14_pibwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0093038, 1.0388491, -4.8690224)
@@ -553,6 +559,7 @@ transform = Transform3D(-1.2894859e-08, 0, 0.1, 0, 0.4, 0, -0.295, 0, -4.371139e
 
 [node name="Counter3" parent="Building" instance=ExtResource("23_y6deb")]
 transform = Transform3D(-0.36, 0, -2.2649372e-08, 0, 0.4, 0, 5.435849e-08, 0, -0.15, -0.054142736, 0.801087, -5.039281)
+layers = 7
 
 [node name="FrontWall2" type="StaticBody3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46624815, 0.49630976, -5.026095)
@@ -576,11 +583,9 @@ lower_button = NodePath("../Buttons/DownButton")
 [node name="Viewport2Din3D" parent="Building/Door" instance=ExtResource("20_5he1u")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.95865357, 3.0034218, -1.4785883)
 screen_size = Vector2(10, 10)
-scene = ExtResource("21_5poiv")
 viewport_size = Vector2(640, 480)
 transparent = 2
 unshaded = true
-scene_properties_keys = PackedStringArray("upgrades_ui.gd")
 
 [node name="Buttons" type="Node3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21114957, 1.6068037, -3.5750155)
@@ -626,14 +631,30 @@ stream = ExtResource("25_dgi5k")
 autoplay = true
 parameters/looping = true
 
-[node name="Tube" parent="Building" instance=ExtResource("26_kmb1v")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0878463, 2.3728518, -6.158097)
+[node name="ChickenTube" parent="Building" instance=ExtResource("26_kmb1v")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.5522418, 2.3728518, -6.158097)
 
-[node name="Tube2" parent="Building" instance=ExtResource("26_kmb1v")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.317195, 2.3728518, -6.158097)
+[node name="ChickenFloat" type="MeshInstance3D" parent="Building/ChickenTube"]
+transform = Transform3D(-0.019432526, 0.44958022, -2.0954758e-08, 0.035985462, 0.0015554463, 0.44855607, 0.4481377, 0.019370183, -0.03601907, -7.875317, 3.5943794, 0.3482151)
+material_override = SubResource("StandardMaterial3D_vchkt")
+mesh = SubResource("ArrayMesh_txyw0")
+skeleton = NodePath("../../Foods/Chicken")
 
-[node name="Tube3" parent="Building" instance=ExtResource("26_kmb1v")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.55304664, 2.3728518, -6.158097)
+[node name="BeefTube" parent="Building" instance=ExtResource("26_kmb1v")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0875735, 2.3728518, -6.158097)
+
+[node name="BeefFloat" type="MeshInstance3D" parent="Building/BeefTube"]
+transform = Transform3D(0.9481629, -0.3177846, 0, 0.3127199, 0.93305147, 0.17782323, -0.05650949, -0.16860543, 0.98406255, 7.6147313, 3.491256, -0.63088137)
+mesh = SubResource("ArrayMesh_vc5cj")
+skeleton = NodePath("../../Foods/Beef")
+
+[node name="PorkTube" parent="Building" instance=ExtResource("26_kmb1v")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.3336583, 2.3728518, -6.158097)
+
+[node name="PorkFloat" type="MeshInstance3D" parent="Building/PorkTube"]
+transform = Transform3D(1, 0, 0, 0, 0.9985639, -0.053573456, 0, 0.053573456, 0.9985639, 0, 3.2352133, 0.17357083)
+mesh = SubResource("ArrayMesh_ty1g6")
+skeleton = NodePath("../../Foods/Pork")
 
 [node name="Sketchfab_Scene" parent="Building" instance=ExtResource("27_fuf3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003721144, 1.2499691, -4.262538)
@@ -647,7 +668,12 @@ mesh_to_hide_path = NodePath("../SpeechBubble")
 watched_door_path = NodePath("../Building/Door")
 npc_spawn_point_path = NodePath("../WalkPoints/SpawnPoint")
 counter_point_path = NodePath("../WalkPoints/Counter")
+cooldown_time = 10
 exit_point_path = NodePath("../WalkPoints/Exit")
+corner_entry_point_path = NodePath("../WalkPoints/Corner_entry")
+corner_exit_point_path = NodePath("../WalkPoints/Corner_exit")
+product_scenes = Array[PackedScene]([ExtResource("26_2wyq8"), ExtResource("27_vxglm"), ExtResource("24_og1vs"), ExtResource("14_pibwh"), ExtResource("33_2cjbq"), ExtResource("34_chjal"), ExtResource("35_vchkt"), ExtResource("36_txyw0"), ExtResource("37_vc5cj")])
+product_spawn_points = Array[NodePath]([NodePath("../FoodSpawners/BeefSpawn"), NodePath("../FoodSpawners/PorkSpawn"), NodePath("../FoodSpawners/ChickenSpawn"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner")])
 
 [node name="SpeechBubble" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.9885666, 3.0040038, -4.8916264)
@@ -665,6 +691,7 @@ width = 170.0
 
 [node name="CarPaths" type="Node3D" parent="." node_paths=PackedStringArray("start_points", "end_points")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.302168, 0, 0)
+visible = false
 script = ExtResource("28_fv21b")
 car_scene = ExtResource("29_yq6so")
 start_points = [NodePath("Start1"), NodePath("Start2"), NodePath("Start3"), NodePath("Start4"), NodePath("Start5")]
@@ -787,23 +814,38 @@ mesh = SubResource("BoxMesh_y6deb")
 
 [node name="Knife" parent="." instance=ExtResource("28_tel4y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9161601, 1.218384, -4.5364413)
+picked_up_layer = 65543
 
 [node name="CutZone" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9072936, 1.5489095, -4.087307)
 
-[node name="Top" type="MeshInstance3D" parent="CutZone"]
+[node name="TopCutZone" type="MeshInstance3D" parent="CutZone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 material_override = SubResource("StandardMaterial3D_5he1u")
 mesh = SubResource("BoxMesh_5q0nq")
 skeleton = NodePath("../..")
 
-[node name="Bottom" type="MeshInstance3D" parent="CutZone"]
+[node name="Top" type="Area3D" parent="CutZone/TopCutZone"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CutZone/TopCutZone/Top"]
+shape = SubResource("BoxShape3D_pibwh")
+
+[node name="BottomCutZone" type="MeshInstance3D" parent="CutZone"]
 material_override = SubResource("StandardMaterial3D_2cjbq")
 mesh = SubResource("BoxMesh_5q0nq")
 skeleton = NodePath("../..")
 
+[node name="Bottom" type="Area3D" parent="CutZone/BottomCutZone"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CutZone/BottomCutZone/Bottom"]
+shape = SubResource("BoxShape3D_5he1u")
+
 [node name="MeatDropZone" type="MeshInstance3D" parent="CutZone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.36441588, 0.010915041)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33134747, 0.010915041)
 material_override = SubResource("StandardMaterial3D_chjal")
 mesh = SubResource("BoxMesh_chjal")
 
@@ -814,6 +856,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5711331, -4.341052)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.299, 0.042128086)
 material_override = SubResource("StandardMaterial3D_cjqg0")
 mesh = SubResource("BoxMesh_vxglm")
+
+[node name="Area3D" type="Area3D" parent="OrderZone"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OrderZone/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.299, 0.042128086)
+shape = SubResource("BoxShape3D_5poiv")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -1.0007501, 3.7662275, -5.0627084)
@@ -852,26 +900,69 @@ frame = 3
 
 [node name="WalkPoints" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.236666, 0, -5.756935)
+visible = false
 
 [node name="SpawnPoint" type="Node3D" parent="WalkPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4493504, 0.7791159, -3.930789)
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.4493504, 0.25235754, -3.930789)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/SpawnPoint"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5691438, 0)
 mesh = SubResource("BoxMesh_c6pm6")
 
+[node name="Corner_entry" type="Node3D" parent="WalkPoints"]
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.4493504, 0.25235754, -0.43893385)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/Corner_entry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5691438, 0)
+mesh = SubResource("BoxMesh_c6pm6")
+
 [node name="Counter" type="Node3D" parent="WalkPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.211, 1, 0.852)
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, -17.211, 0.04626012, 0.852)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/Counter"]
 visible = false
 mesh = SubResource("BoxMesh_5poiv")
 
 [node name="Exit" type="Node3D" parent="WalkPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.019741, 0.6765404, 4.789353)
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.019741, 0.24061325, 4.789353)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/Exit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5729985, 0)
 mesh = SubResource("BoxMesh_2cjbq")
 
-[node name="MeatSpawners" type="Node3D" parent="."]
+[node name="Corner_exit" type="Node3D" parent="WalkPoints"]
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.019741, 0.24061325, 1.4061623)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/Corner_exit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5729985, 0)
+mesh = SubResource("BoxMesh_2cjbq")
+
+[node name="FoodSpawners" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06620574, 1.591346, -6.3082533)
+
+[node name="ChickenSpawn" type="MeshInstance3D" parent="FoodSpawners"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.195252, 0.35518003, 0.18883228)
+visible = false
+mesh = SubResource("BoxMesh_cjqg0")
+
+[node name="PotatoeSpawner" type="MeshInstance3D" parent="FoodSpawners"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.9755689, -0.12956157, 1.4002504)
+visible = false
+mesh = SubResource("BoxMesh_cjqg0")
+
+[node name="SauceSpawner" type="MeshInstance3D" parent="FoodSpawners"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.92632747, 0.118873924, 0.25160933)
+visible = false
+mesh = SubResource("BoxMesh_cjqg0")
+
+[node name="PorkSpawn" type="MeshInstance3D" parent="FoodSpawners"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.4827926, 0.3295622, 0)
+visible = false
+mesh = SubResource("BoxMesh_cjqg0")
+
+[node name="BeefSpawn" type="MeshInstance3D" parent="FoodSpawners"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5791764, 0.3080654, 0)
+visible = false
+mesh = SubResource("BoxMesh_cjqg0")
