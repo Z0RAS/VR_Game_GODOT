@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dsntq6120767d" path="res://scenes/counter2.tscn" id="23_y6deb"]
 [ext_resource type="PackedScene" uid="uid://bbqpfvmsgn7as" path="res://models/Buildings/old_radio.glb" id="24_j8jky"]
 [ext_resource type="PackedScene" uid="uid://838q43q017ym" path="res://scenes/foods/Chicken.tscn" id="24_og1vs"]
-[ext_resource type="AudioStream" uid="uid://1u74khirtati" path="res://sound/music/Portal OST - Radio Loop.mp3" id="25_dgi5k"]
+[ext_resource type="AudioStream" uid="uid://1u74khirtati" path="res://sound/music/Music3.mp3" id="25_dgi5k"]
 [ext_resource type="PackedScene" uid="uid://c78jhsnnevwqh" path="res://scenes/foods/Beef.tscn" id="26_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://bera66qwy6ccy" path="res://models/Buildings/lab_tube_for_p.a.l.glb" id="26_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://qjxqj3r0vbaq" path="res://models/Buildings/simple_building.glb" id="27_2f3dj"]
@@ -550,16 +550,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2061268, 1.4484196, -6.078
 
 [node name="Potato" parent="Building/Foods" instance=ExtResource("14_pibwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0093038, 1.0388491, -4.8690224)
+ranged_grab_method = 0
 
 [node name="Potato2" parent="Building/Foods" instance=ExtResource("14_pibwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0093038, 1.1649762, -4.8213706)
 
+[node name="SweetPotato" parent="Building/Foods" instance=ExtResource("34_chjal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0093038, 1.3102727, -4.8213706)
+
+[node name="Fries" parent="Building/Foods" instance=ExtResource("33_2cjbq")]
+transform = Transform3D(0.9998881, -0.014956914, 0, 0.014956914, 0.9998881, 0, 0, 0, 1, -1.8034523, 1.6062738, -4.8213706)
+
+[node name="GarlicSauce" parent="Building/Foods" instance=ExtResource("37_vc5cj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2061268, 1.8789887, -6.078186)
+
+[node name="HotSauce" parent="Building/Foods" instance=ExtResource("35_vchkt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5396966, 1.4484196, -6.078186)
+
+[node name="Ketchup" parent="Building/Foods" instance=ExtResource("36_txyw0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82939154, 1.4484196, -6.078186)
+
 [node name="Counter2" parent="Building" instance=ExtResource("23_y6deb")]
 transform = Transform3D(-1.2894859e-08, 0, 0.1, 0, 0.4, 0, -0.295, 0, -4.371139e-09, -1.5729272, 0.801087, -6.113384)
+layers = 65537
 
 [node name="Counter3" parent="Building" instance=ExtResource("23_y6deb")]
 transform = Transform3D(-0.36, 0, -2.2649372e-08, 0, 0.4, 0, 5.435849e-08, 0, -0.15, -0.054142736, 0.801087, -5.039281)
-layers = 7
+layers = 65537
 
 [node name="FrontWall2" type="StaticBody3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46624815, 0.49630976, -5.026095)
@@ -661,26 +678,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003721144, 1.2499691, -4.26
 
 [node name="Outside" type="Node3D" parent="."]
 
-[node name="OrderTerminal" parent="." instance=ExtResource("28_yq6so")]
-transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, -0.022964299, 1.5593586, -5.5332828)
-label_3d_path = NodePath("../SpeechBubble/Label3D")
-mesh_to_hide_path = NodePath("../SpeechBubble")
-watched_door_path = NodePath("../Building/Door")
-npc_spawn_point_path = NodePath("../WalkPoints/SpawnPoint")
-counter_point_path = NodePath("../WalkPoints/Counter")
-cooldown_time = 10
-exit_point_path = NodePath("../WalkPoints/Exit")
-corner_entry_point_path = NodePath("../WalkPoints/Corner_entry")
-corner_exit_point_path = NodePath("../WalkPoints/Corner_exit")
-product_scenes = Array[PackedScene]([ExtResource("26_2wyq8"), ExtResource("27_vxglm"), ExtResource("24_og1vs"), ExtResource("14_pibwh"), ExtResource("33_2cjbq"), ExtResource("34_chjal"), ExtResource("35_vchkt"), ExtResource("36_txyw0"), ExtResource("37_vc5cj")])
-product_spawn_points = Array[NodePath]([NodePath("../FoodSpawners/BeefSpawn"), NodePath("../FoodSpawners/PorkSpawn"), NodePath("../FoodSpawners/ChickenSpawn"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner")])
-
 [node name="SpeechBubble" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.9885666, 3.0040038, -4.8916264)
 material_override = SubResource("StandardMaterial3D_txyw0")
 mesh = SubResource("TubeTrailMesh_5q0nq")
 
-[node name="Label3D" type="Label3D" parent="SpeechBubble"]
+[node name="SpeechBubbleOrder" type="Label3D" parent="SpeechBubble"]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 0.0025586993, 0.20419456, 0.020115357)
 text = "Testas1ssssssssss
 Testas2
@@ -691,7 +694,6 @@ width = 170.0
 
 [node name="CarPaths" type="Node3D" parent="." node_paths=PackedStringArray("start_points", "end_points")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.302168, 0, 0)
-visible = false
 script = ExtResource("28_fv21b")
 car_scene = ExtResource("29_yq6so")
 start_points = [NodePath("Start1"), NodePath("Start2"), NodePath("Start3"), NodePath("Start4"), NodePath("Start5")]
@@ -809,7 +811,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.04455, 0.06310105, -9.2729
 
 [node name="PlayerSpawn" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1461194, 0.27868438, -5.0967607)
-visible = false
 mesh = SubResource("BoxMesh_y6deb")
 
 [node name="Knife" parent="." instance=ExtResource("28_tel4y")]
@@ -858,6 +859,8 @@ material_override = SubResource("StandardMaterial3D_cjqg0")
 mesh = SubResource("BoxMesh_vxglm")
 
 [node name="Area3D" type="Area3D" parent="OrderZone"]
+collision_layer = 65537
+collision_mask = 65537
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="OrderZone/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.299, 0.042128086)
@@ -966,3 +969,16 @@ mesh = SubResource("BoxMesh_cjqg0")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5791764, 0.3080654, 0)
 visible = false
 mesh = SubResource("BoxMesh_cjqg0")
+
+[node name="OrderTerminal" parent="." node_paths=PackedStringArray("order_zone_root") instance=ExtResource("28_yq6so")]
+transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, -0.022964299, 1.5593586, -5.5332828)
+speechBubbleOrderLabel = NodePath("../SpeechBubble/SpeechBubbleOrder")
+watched_door_path = NodePath("../Building/Door")
+npc_spawn_point_path = NodePath("../WalkPoints/SpawnPoint")
+counter_point_path = NodePath("../WalkPoints/Counter")
+exit_point_path = NodePath("../WalkPoints/Exit")
+corner_entry_point_path = NodePath("../WalkPoints/Corner_entry")
+corner_exit_point_path = NodePath("../WalkPoints/Corner_exit")
+product_scenes = Array[PackedScene]([ExtResource("26_2wyq8"), ExtResource("27_vxglm"), ExtResource("24_og1vs"), ExtResource("14_pibwh"), ExtResource("33_2cjbq"), ExtResource("34_chjal"), ExtResource("35_vchkt"), ExtResource("36_txyw0"), ExtResource("37_vc5cj")])
+product_spawn_points = Array[NodePath]([NodePath("../FoodSpawners/BeefSpawn"), NodePath("../FoodSpawners/PorkSpawn"), NodePath("../FoodSpawners/ChickenSpawn"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner")])
+order_zone_root = NodePath("../OrderZone")

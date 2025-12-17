@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b61ifp5euc754" path="res://models/foods/SpecialMeat.tscn" id="4_ch1qy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
-size = Vector3(1.1376953, 0.2102887, 0.5084839)
+size = Vector3(1.1376953, 0.14217179, 0.5084839)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_a70gu"]
 _surfaces = [{
@@ -21,15 +21,16 @@ _surfaces = [{
 "vertex_data": PackedByteArray("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")
 }]
 
-[node name="SpecialMeat" type="RigidBody3D"]
-collision_layer = 7
+[node name="SpecialMeat" type="RigidBody3D" groups=["SpecialMeat"]]
+collision_layer = 65543
 collision_mask = 196615
 freeze_mode = 1
 script = ExtResource("1_spfk3")
+picked_up_layer = 65537
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.010057922, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.005508713, 0)
 shape = SubResource("BoxShape3D_a2kvu")
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("2_w4jgl")]

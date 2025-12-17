@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlty1cgw780sy"]
+[gd_scene load_steps=3 format=3 uid="uid://dlty1cgw780sy"]
 
+[ext_resource type="Script" uid="uid://cny6rj3a0arbs" path="res://scenes/npc_animation.gd" id="1_abqhh"]
 [ext_resource type="PackedScene" uid="uid://c1o586q1p8rkp" path="res://models/npc/npc_model.tscn" id="1_nh2m4"]
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_abqhh")
 
 [node name="WobblePivot" type="Node3D" parent="."]
 

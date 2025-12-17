@@ -22,6 +22,7 @@ flip_faces = true
 size = Vector3(0.11, 0.11, 0.11)
 
 [node name="PickableObject" instance=ExtResource("1_ae35o")]
+picked_up_layer = 65543
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_a2kvu")

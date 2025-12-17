@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://b5kch8u4akc6i"]
+[gd_scene load_steps=63 format=3 uid="uid://b5kch8u4akc6i"]
 
 [ext_resource type="Script" uid="uid://bbgjp7dcirqth" path="res://scripts/order_terminal.gd" id="1_2xjl1"]
 [ext_resource type="PackedScene" uid="uid://dlty1cgw780sy" path="res://scenes/npc.tscn" id="2_be764"]
@@ -178,8 +178,11 @@ albedo_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_d5o8v"]
 font_size = 32
 
+[sub_resource type="LabelSettings" id="LabelSettings_be764"]
+font_size = 32
+
 [sub_resource type="LabelSettings" id="LabelSettings_2xjl1"]
-font_size = 64
+font_size = 35
 font_color = Color(0, 0.66, 0.37399998, 1)
 
 [node name="OrderTerminal" type="Node3D"]
@@ -187,22 +190,11 @@ script = ExtResource("1_2xjl1")
 button_paths = Array[NodePath]([NodePath("Buttons/Button"), NodePath("Buttons/Button2"), NodePath("Buttons/Button3"), NodePath("Buttons/Button4"), NodePath("Buttons/Button5"), NodePath("Buttons/Button6"), NodePath("Buttons/Button7"), NodePath("Buttons/Button8"), NodePath("Buttons/Button9")])
 confirm_button_path = NodePath("Buttons/ButtonConfirm")
 delete_button_path = NodePath("Buttons/ButtonDelete")
-label_3d_path = null
 terminal_viewport_path = NodePath("SubViewportContainer/SubViewport")
 money_label_path = NodePath("SubViewportContainer/SubViewport/Control/Money")
-mesh_to_hide_path = null
 timer_path = NodePath("SubViewportContainer/SubViewport/Control/Control")
-watched_door_path = null
-npc_spawn_point_path = null
-counter_point_path = null
 npc_scene = ExtResource("2_be764")
-cooldown_time = null
-exit_point_path = null
 timer_label_path = NodePath("SubViewportContainer/SubViewport/Control/Control")
-corner_entry_point_path = null
-corner_exit_point_path = null
-product_scenes = null
-product_spawn_points = null
 
 [node name="Screen" type="Node3D" parent="."]
 
@@ -354,20 +346,36 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -16.334991
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Control"]
+[node name="InfoLabel" type="Label" parent="SubViewportContainer/SubViewport/Control"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 357.0
+offset_bottom = 93.0
 size_flags_horizontal = 8
 size_flags_vertical = 8
-text = "Zdarova"
+text = "Burger Laukiama užsakymo..."
 label_settings = SubResource("LabelSettings_d5o8v")
+autowrap_mode = 2
+
+[node name="TimeLabel" type="Label" parent="SubViewportContainer/SubViewport/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -112.0
+offset_bottom = -67.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Pr 09:00"
+label_settings = SubResource("LabelSettings_be764")
 
 [node name="Money" type="Label" parent="SubViewportContainer/SubViewport/Control"]
 layout_mode = 1
@@ -380,7 +388,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "$0"
 label_settings = SubResource("LabelSettings_2xjl1")
-horizontal_alignment = 2
 vertical_alignment = 2
 
 [node name="Control" parent="SubViewportContainer/SubViewport/Control" instance=ExtResource("14_mloqh")]
@@ -394,3 +401,5 @@ offset_top = -187.0
 offset_right = -66.0
 offset_bottom = -187.0
 grow_horizontal = 0
+
+[node name="day_timer" type="Timer" parent="."]

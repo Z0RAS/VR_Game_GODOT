@@ -6,17 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://decrjfapb7d3o" path="res://scenes/SweetPotato.tscn" id="4_5byer"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
-size = Vector3(0.07243653, 0.1, 0.06589355)
+size = Vector3(0.23563842, 0.14291993, 0.06589355)
 
-[node name="PickableObject" type="RigidBody3D" groups=["Bulvės3"]]
-collision_layer = 4
+[node name="PickableObject" type="RigidBody3D" groups=["Bulves3"]]
+collision_layer = 65541
 collision_mask = 196615
 freeze_mode = 1
 script = ExtResource("1_jiu8k")
+picked_up_layer = 65537
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.75987643, 0, 0, 0, 1, 0.018493656, -0.010875724, -0.011486813)
+transform = Transform3D(1, 0, 0, 0, 0.75987643, 0, 0, 0, 1, 0.025473032, -0.00024562096, -0.011486813)
 shape = SubResource("BoxShape3D_a2kvu")
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("2_dslao")]
@@ -27,5 +28,5 @@ visible = false
 script = ExtResource("3_yasn0")
 metadata/_custom_type_script = "uid://bpahxy24ocofs"
 
-[node name="SweetPotato" parent="." groups=["Bulvės1"] instance=ExtResource("4_5byer")]
-transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0.09228944, 0, -0.0828728)
+[node name="SweetPotato" parent="." instance=ExtResource("4_5byer")]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0.061884277, 0, 0.0027396902)

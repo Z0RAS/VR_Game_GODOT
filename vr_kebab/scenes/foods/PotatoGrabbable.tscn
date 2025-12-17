@@ -8,15 +8,16 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
 size = Vector3(0.07243653, 0.1, 0.06589355)
 
-[node name="PickableObject" type="RigidBody3D" groups=["Bulvės1"]]
+[node name="PickableObject" type="RigidBody3D" groups=["Bulves1"]]
 collision_layer = 4
 collision_mask = 196615
 freeze_mode = 1
 script = ExtResource("1_ql4e2")
+picked_up_layer = 65537
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.75987643, 0, 0, 0, 1, 0.018493656, -0.010875724, -0.011486813)
+transform = Transform3D(1, 0, 0, 0, 0.75987643, 0, 0, 0, 1, 0.014156688, -0.010875724, -0.011486813)
 shape = SubResource("BoxShape3D_a2kvu")
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("2_pnx4b")]
