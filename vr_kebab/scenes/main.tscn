@@ -404,7 +404,7 @@ transparency = 1
 albedo_color = Color(0.11902017, 0.4951529, 0.41536504, 0.2509804)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5q0nq"]
-size = Vector3(0.1, 0.1, 0.1)
+size = Vector3(0.1, 0.2, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pibwh"]
 size = Vector3(0.1, 0.1, 0.1)
@@ -551,37 +551,6 @@ shape = SubResource("BoxShape3D_0ld40")
 
 [node name="Foods" type="Node" parent="Building"]
 
-[node name="Chicken" parent="Building/Foods" instance=ExtResource("24_og1vs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0622652, 1.4202032, -6.0856514)
-
-[node name="Beef" parent="Building/Foods" instance=ExtResource("26_2wyq8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47246313, 1.4818131, -6.0931077)
-
-[node name="Pork" parent="Building/Foods" instance=ExtResource("27_vxglm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2061268, 1.4484196, -6.078186)
-
-[node name="Potato" parent="Building/Foods" instance=ExtResource("14_pibwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0093038, 1.0388491, -4.8690224)
-ranged_grab_method = 0
-
-[node name="Potato2" parent="Building/Foods" instance=ExtResource("14_pibwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0093038, 1.1649762, -4.8213706)
-
-[node name="SweetPotato" parent="Building/Foods" instance=ExtResource("34_chjal")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0093038, 1.3102727, -4.8213706)
-
-[node name="Fries" parent="Building/Foods" instance=ExtResource("33_2cjbq")]
-transform = Transform3D(0.9998881, -0.014956914, 0, 0.014956914, 0.9998881, 0, 0, 0, 1, -1.8034523, 1.6062738, -4.8213706)
-
-[node name="GarlicSauce" parent="Building/Foods" instance=ExtResource("37_vc5cj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2061268, 1.8789887, -6.078186)
-
-[node name="HotSauce" parent="Building/Foods" instance=ExtResource("35_vchkt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5396966, 1.4484196, -6.078186)
-
-[node name="Ketchup" parent="Building/Foods" instance=ExtResource("36_txyw0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82939154, 1.4484196, -6.078186)
-
 [node name="Counter2" parent="Building" instance=ExtResource("23_y6deb")]
 transform = Transform3D(-1.2894859e-08, 0, 0.1, 0, 0.4, 0, -0.295, 0, -4.371139e-09, -1.5729272, 0.801087, -6.113384)
 layers = 65537
@@ -668,7 +637,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.5522418, 2.3728518, 
 transform = Transform3D(-0.019432526, 0.44958022, -2.0954758e-08, 0.035985462, 0.0015554463, 0.44855607, 0.4481377, 0.019370183, -0.03601907, -7.875317, 3.5943794, 0.3482151)
 material_override = SubResource("StandardMaterial3D_vchkt")
 mesh = SubResource("ArrayMesh_txyw0")
-skeleton = NodePath("../../Foods/Chicken")
+skeleton = NodePath("")
 
 [node name="BeefTube" parent="Building" instance=ExtResource("26_kmb1v")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0875735, 2.3728518, -6.158097)
@@ -676,7 +645,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.0875735, 2.3728518, 
 [node name="BeefFloat" type="MeshInstance3D" parent="Building/BeefTube"]
 transform = Transform3D(0.9481629, -0.3177846, 0, 0.3127199, 0.93305147, 0.17782323, -0.05650949, -0.16860543, 0.98406255, 7.6147313, 3.491256, -0.63088137)
 mesh = SubResource("ArrayMesh_vc5cj")
-skeleton = NodePath("../../Foods/Beef")
+skeleton = NodePath("")
 
 [node name="PorkTube" parent="Building" instance=ExtResource("26_kmb1v")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.3336583, 2.3728518, -6.158097)
@@ -684,7 +653,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.3336583, 2.3728518, 
 [node name="PorkFloat" type="MeshInstance3D" parent="Building/PorkTube"]
 transform = Transform3D(1, 0, 0, 0, 0.9985639, -0.053573456, 0, 0.053573456, 0.9985639, 0, 3.2352133, 0.17357083)
 mesh = SubResource("ArrayMesh_ty1g6")
-skeleton = NodePath("../../Foods/Pork")
+skeleton = NodePath("")
 
 [node name="Sketchfab_Scene" parent="Building" instance=ExtResource("27_fuf3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003721144, 1.2499691, -4.262538)
@@ -827,14 +796,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1461194, 0.27868438, -5.09
 mesh = SubResource("BoxMesh_y6deb")
 
 [node name="Knife" parent="." instance=ExtResource("28_tel4y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9161601, 1.218384, -4.5364413)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9161601, 1.7509274, -6.030639)
 picked_up_layer = 65543
 
 [node name="CutZone" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9072936, 1.5489095, -4.087307)
 
 [node name="TopCutZone" type="MeshInstance3D" parent="CutZone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008730769, 0.4, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_5he1u")
 mesh = SubResource("BoxMesh_5q0nq")
 skeleton = NodePath("../..")
@@ -847,6 +817,7 @@ collision_mask = 3
 shape = SubResource("BoxShape3D_pibwh")
 
 [node name="BottomCutZone" type="MeshInstance3D" parent="CutZone"]
+visible = false
 material_override = SubResource("StandardMaterial3D_2cjbq")
 mesh = SubResource("BoxMesh_5q0nq")
 skeleton = NodePath("../..")
@@ -860,6 +831,7 @@ shape = SubResource("BoxShape3D_5he1u")
 
 [node name="MeatDropZone" type="MeshInstance3D" parent="CutZone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33134747, 0.010915041)
+visible = false
 material_override = SubResource("StandardMaterial3D_chjal")
 mesh = SubResource("BoxMesh_chjal")
 
@@ -984,6 +956,9 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5791764, 0.3080654, 
 visible = false
 mesh = SubResource("BoxMesh_cjqg0")
 
+[node name="Beef" parent="FoodSpawners" instance=ExtResource("26_2wyq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6467656, 0.21925783, 0.08945894)
+
 [node name="OrderTerminal" parent="." node_paths=PackedStringArray("order_zone_root", "radio_player") instance=ExtResource("28_yq6so")]
 transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, -0.022964299, 1.5593586, -5.5332828)
 speechBubbleOrderLabel = NodePath("../SpeechBubble/SpeechBubbleOrder")
@@ -994,6 +969,7 @@ exit_point_path = NodePath("../WalkPoints/Exit")
 corner_entry_point_path = NodePath("../WalkPoints/Corner_entry")
 corner_exit_point_path = NodePath("../WalkPoints/Corner_exit")
 product_scenes = Array[PackedScene]([ExtResource("26_2wyq8"), ExtResource("27_vxglm"), ExtResource("24_og1vs"), ExtResource("14_pibwh"), ExtResource("33_2cjbq"), ExtResource("34_chjal"), ExtResource("35_vchkt"), ExtResource("36_txyw0"), ExtResource("37_vc5cj")])
+product_spawn_points = Array[NodePath]([NodePath("../FoodSpawners/BeefSpawn"), NodePath("../FoodSpawners/PorkSpawn"), NodePath("../FoodSpawners/ChickenSpawn"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner")])
 order_zone_root = NodePath("../OrderZone")
 radio_player = NodePath("../Building/Radio/AudioStreamPlayer3D")
 radio_tracks = Array[AudioStream]([ExtResource("45_j2jfr"), ExtResource("46_bjg73"), ExtResource("47_bu4jf"), ExtResource("48_o7ddy"), ExtResource("49_0loja"), ExtResource("50_ids8r")])
@@ -1004,3 +980,6 @@ confirm_wrong_sfx = ExtResource("54_kf5aa")
 npc_greet_sfx = ExtResource("55_t5ykj")
 item_added_sfx = ExtResource("56_e755i")
 qouta_reached_sfx = ExtResource("57_ro3en")
+
+[node name="Knife2" parent="." instance=ExtResource("28_tel4y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1932669, 1.6031997, -6.2904816)

@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=4 uid="uid://dihbwo7blm0ir"]
+[gd_scene load_steps=8 format=4 uid="uid://dihbwo7blm0ir"]
 
 [ext_resource type="Script" uid="uid://uv2nmfekdmyy" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_ifhss"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="2_o10ut"]
 [ext_resource type="Script" uid="uid://bpahxy24ocofs" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="3_k0eyc"]
 [ext_resource type="PackedScene" uid="uid://cr583t42bftcn" path="res://models/foods/GarlicSauce.tscn" id="4_o10ut"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
-size = Vector3(1, 0.46312988, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o10ut"]
+albedo_color = Color(0.93333334, 0.63529414, 0.13333334, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_o10ut"]
 _surfaces = [{
@@ -21,6 +21,10 @@ _surfaces = [{
 "vertex_data": PackedByteArray("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")
 }]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o10ut"]
+height = 0.09799576
+radius = 0.07324219
+
 [node name="GarlicSauce" type="RigidBody3D" groups=["Padazas3"]]
 collision_layer = 4
 collision_mask = 196615
@@ -29,10 +33,6 @@ script = ExtResource("1_ifhss")
 picked_up_layer = 65537
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.035212755, 0.018578613, 0.048469998)
-shape = SubResource("BoxShape3D_a2kvu")
-
 [node name="GrabPointHandRight" parent="." instance=ExtResource("2_o10ut")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03506802, 0.056116268, -0.01550461)
 visible = false
@@ -40,6 +40,12 @@ visible = false
 [node name="XRToolsHighlightVisible" type="Node3D" parent="."]
 script = ExtResource("3_k0eyc")
 metadata/_custom_type_script = "uid://bpahxy24ocofs"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XRToolsHighlightVisible"]
+transform = Transform3D(0.1, 0, 0, 0, -0.0068015284, 0.09976843, 0, -0.09976843, -0.0068015284, -0.28514054, -0.040693667, -0.16308108)
+material_override = SubResource("StandardMaterial3D_o10ut")
+mesh = SubResource("ArrayMesh_o10ut")
+skeleton = NodePath("../../Sauce_Material_0")
 
 [node name="ItemLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
@@ -53,5 +59,7 @@ outline_size = 16
 [node name="Sauce_Material_0" parent="." instance=ExtResource("4_o10ut")]
 transform = Transform3D(0.1, 0, 0, 0, -0.0068015284, 0.09976843, 0, -0.09976843, -0.0068015284, -0.28514054, -0.040693667, -0.16308108)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sauce_Material_0"]
-mesh = SubResource("ArrayMesh_o10ut")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.036359087, 0.018831253, 0.045849726)
+shape = SubResource("CylinderShape3D_o10ut")
+debug_color = Color(5.198121e-06, 0.69428515, 0.95807093, 1)

@@ -420,7 +420,7 @@ shadow_mesh = SubResource("ArrayMesh_25g70")
 size = Vector3(0.57, 1.3284376, 1.0324512)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4i3le"]
-size = Vector3(0.57, 1.345, 0.11168456)
+size = Vector3(0.59749997, 1.345, 0.12713134)
 
 [node name="Sketchfab_model" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
@@ -477,5 +477,5 @@ transform = Transform3D(1, 0, 0, 0, 0.39999998, 0, 0, 0, 1, 0, 0.10037917, 0.902
 shape = SubResource("BoxShape3D_5no5s")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.39999998, 0, 0, 0, 1, 0, -0.10591102, 0.07431247)
+transform = Transform3D(1, 0, 0, 0, 0.39999998, 0, 0, 0, 1, 0.013749987, -0.10591102, 0.08203586)
 shape = SubResource("BoxShape3D_4i3le")

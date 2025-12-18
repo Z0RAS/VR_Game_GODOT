@@ -4,11 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_gev3w"]
 [ext_resource type="Script" uid="uid://bpahxy24ocofs" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="4_dhvyt"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
-size = Vector3(1, 0.21117187, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqktj"]
-albedo_color = Color(0.9328059, 0.33323446, 0.6965842, 1)
+albedo_color = Color(0.93333334, 0.63529414, 0.13333334, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ukrha"]
 _surfaces = [{
@@ -105,6 +102,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_y8o3g")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jww0b"]
+points = PackedVector3Array(0.4447096, -0.0764714, 0.14833333, -0.5045889, -0.17534481, 0.14833333, -0.18796246, 0.7936889, -0.009888887, -0.18796246, 0.7936889, 0.14833333, 0.42249447, 0.29924446, 0, -0.22755286, -0.47208893, -0.009888887, 0.3655288, 0.5562936, 0.14833333, -0.010144442, -0.47208893, 0.14833333, 0.31856963, -0.16791072, 2.7755576e-17, -0.4847453, 0.10169898, 0.14833333, -0.38581768, -0.39291584, 0.14833333, -0.46499848, -0.29404247, -0.009888887, 0.24928643, 0.5761334, 2.7755576e-17, 0.12817997, 0.7343401, 0.14833333, 0.48430002, 0.31902224, 0.14833333, 0.20726398, -0.37309164, 0.14833333, -0.4254202, 0.1090866, -1.3877788e-17, 0.12825258, -0.3410476, -1.3877788e-17, 0.42249447, 0.057156377, 0, -0.24739647, 0.7343401, 0.14833333, -0.20790286, 0.7738646, -0.009888887, -0.22755286, -0.47208893, 0.14833333, 0.38785285, 0.40299648, 1.3877788e-17, 0.48430002, 0.04235015, 0.14833333, -0.32657728, -0.43244046, -0.009888887, 0.3655288, -0.2148694, 0.14833333, -0.5045889, 0.022525907, 0.14833333, -0.06938485, 0.7936889, 0.14833333, 0.18008792, 0.62795514, 1.3877788e-17, 0.286348, 0.6354667, 0.14833333, -0.46499848, -0.29404247, 0.14833333, 0.10843317, -0.43244046, 0.14833333)
+
 [node name="Beef" type="RigidBody3D" groups=["Mesa1"]]
 collision_layer = 4
 collision_mask = 196615
@@ -113,10 +113,6 @@ script = ExtResource("1_pqktj")
 picked_up_layer = 65537
 ranged_grab_method = 0
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.035212755, -0.006617188, 0.048469998)
-shape = SubResource("BoxShape3D_a2kvu")
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("3_gev3w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07525045, 0.056116268, 0.0024041422)
@@ -144,3 +140,7 @@ outline_size = 16
 [node name="Beef" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, -0.035212755, 0, 0.026040161)
 mesh = SubResource("ArrayMesh_jww0b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, -0.035212755, 0, 0.026040161)
+shape = SubResource("ConvexPolygonShape3D_jww0b")

@@ -110,19 +110,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m64ns")
 
-[node name="Sketchfab_Scene" type="Node3D"]
-
-[node name="Object_2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.22785188, -0.16339642, -0.95988804, -0.037737276, -0.98656046, 0.15897891, -0.9729642, -8.195638e-08, -0.2309558, -0.14341271, -0.95125073, 0.98287255)
+[node name="Object_2" type="MeshInstance3D"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_bvkr1")
 skeleton = NodePath("")
 
 [node name="Object_3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2278519, -0.16339645, -0.9598881, -0.037737362, -0.98656046, 0.15897891, -0.9729642, -1.3847946e-15, -0.23095582, -0.14341271, -0.95125073, 0.98287255)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_skv2d")
 skeleton = NodePath("")
 
 [node name="Object_4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2278519, -0.16339645, -0.9598881, -0.037737362, -0.98656046, 0.15897891, -0.9729642, -1.3847946e-15, -0.23095582, -0.14341271, -0.95125073, 0.98287255)
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_8y07p")
 skeleton = NodePath("")

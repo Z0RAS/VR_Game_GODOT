@@ -4,9 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_n7iuj"]
 [ext_resource type="Script" uid="uid://bpahxy24ocofs" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="4_apll4"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_a2kvu"]
-size = Vector3(1, 0.5953369, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ha44g"]
 albedo_color = Color(0.62410945, 0.3325676, 0.21622375, 1)
 
@@ -42,8 +39,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f78w1")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ha44g"]
+points = PackedVector3Array(0.22972924, 1.6299125, 0.8341372, -0.20700136, -0.99354976, -0.37527573, -0.35149553, -0.9361316, -0.422167, -0.41959152, 1.0375073, -1.7147088, -0.7356184, 1.5345141, 0.9797399, 0.7998314, 0.2329476, -0.2725823, -0.10932234, -0.70315886, 1.290286, -0.7847004, -0.73577195, 0.6424716, -0.8276013, -0.18677694, -1.5101595, 0.22954132, 1.7252352, -0.37113523, 0.36990216, -0.72034883, -0.511078, 0.2765822, 0.71158886, 1.3093472, -0.8276013, 1.0375073, -1.5101595, -0.41959152, -0.18677694, -1.7147088, 0.55457765, 0.47042862, -0.88392776, 0.27599394, -0.8213819, 0.7318994, -0.5463095, 0.083967105, 1.376648, -0.30391484, 1.789142, -0.32584038, -0.40429255, 1.5536274, 1.2923363, 0.7475039, 0.85036826, 0.012650697, 0.41375366, 0.14014569, 1.0992202, -0.82787955, 0.90393794, 0.63784903, -0.45165384, -0.89634335, 1.0916244, -0.11030733, -0.07041718, 1.5026594, -0.3548982, 1.7985646, 0.8989157, 0.36659312, 1.415994, -0.64918983, -0.78395134, 1.5344496, 0.25545737, 0.74770945, -0.003322629, 0.060238164, -0.7331952, -0.6828708, 0.9761867, -0.10974927, 0.867541, 1.4937165, 0.085630745, -0.98513764, -0.32479453, -0.011411877, 1.5376582, 1.225076)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j2d5j"]
-albedo_color = Color(0.6666731, 0.18807608, 0.3308442, 1)
+albedo_color = Color(0.93333334, 0.63529414, 0.13333334, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_veoid"]
 _surfaces = [{
@@ -66,14 +66,14 @@ script = ExtResource("1_j2d5j")
 picked_up_layer = 65537
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Mesa3"]]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.035212755, -0.003967284, 0.026040161)
-shape = SubResource("BoxShape3D_a2kvu")
-
 [node name="ItemMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0, 0, 0, 0.09, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_ha44g")
 mesh = SubResource("ArrayMesh_j2d5j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0, 0, 0, 0.09, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ha44g")
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("3_n7iuj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07525045, 0.056116268, 0.0024041422)
@@ -88,12 +88,3 @@ transform = Transform3D(-3.934025e-09, -0.09, 0, 0.09, -3.934025e-09, 0, 0, 0, 0
 material_override = SubResource("StandardMaterial3D_j2d5j")
 mesh = SubResource("ArrayMesh_veoid")
 skeleton = NodePath("../../ItemMesh")
-
-[node name="ItemLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-visible = false
-pixel_size = 0.0004
-texture_filter = 0
-text = "Sveiki"
-font_size = 60
-outline_size = 16

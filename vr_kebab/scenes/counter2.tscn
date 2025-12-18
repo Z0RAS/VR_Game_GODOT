@@ -45,18 +45,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_24yi8")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_8lsmo"]
-size = Vector3(2.786, 2.8577452, 20.440723)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8lsmo"]
+points = PackedVector3Array(-1.1660719, -1.7182152, -9.994633, -1.3642453, 0.92268634, -10.321995, 1.1658038, -1.7182152, -9.994633, -1.1660719, -1.7182152, 9.990591, -1.3642453, 1.1083381, -10.321995, 1.3639773, 0.92268634, -10.321995, -1.3642453, 0.92268634, 10.319973, 1.3642443, 0.92268634, -0.19399261, 1.1658038, -1.7182152, 9.990591, 1.1658038, 0.92268634, 10.321995, 1.3639773, 1.1083381, -10.321995, -1.3642453, 1.1083381, 10.319973, 1.3642443, 1.1083381, -0.19399261, 1.3642443, 0.92268634, 0.18994999, 1.3639773, 0.92268634, 10.321995, 1.1658038, 1.1083381, 10.321995, 1.3642443, 1.1083381, 0.18994999, 1.3639773, 1.1083381, 10.321995)
 
 [node name="Cube" type="MeshInstance3D"]
 material_override = SubResource("StandardMaterial3D_xh8s0")
 mesh = SubResource("ArrayMesh_djrxp")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_layer = 65537
-collision_mask = 65537
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.036010742, -0.023531199, 0.07595444)
-shape = SubResource("BoxShape3D_8lsmo")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_8lsmo")
