@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://comtkru161q6j"]
+[gd_scene load_steps=11 format=4 uid="uid://comtkru161q6j"]
 
 [ext_resource type="Script" uid="uid://uv2nmfekdmyy" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_spfk3"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="2_w4jgl"]
+[ext_resource type="Animation" uid="uid://bv5tuc1kjv0k5" path="res://addons/godot-xr-tools/hands/animations/right/Hold.res" id="3_ch1qy"]
 [ext_resource type="Script" uid="uid://bpahxy24ocofs" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="3_h7tcp"]
+[ext_resource type="Script" uid="uid://bs5s4h0jby5nq" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="4_a70gu"]
 [ext_resource type="PackedScene" uid="uid://b61ifp5euc754" path="res://models/foods/SpecialMeat.tscn" id="4_ch1qy"]
+
+[sub_resource type="Resource" id="Resource_lrdtm"]
+script = ExtResource("4_a70gu")
+closed_pose = ExtResource("3_ch1qy")
+metadata/_custom_type_script = "uid://bs5s4h0jby5nq"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spfk3"]
 albedo_color = Color(0.93333334, 0.63529414, 0.13333334, 1)
@@ -33,7 +40,8 @@ picked_up_layer = 65537
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("2_w4jgl")]
-transform = Transform3D(-2.194669e-08, 1, -5.7790256e-08, 0.41000262, -4.371139e-08, -0.91208434, -0.91208434, -4.371139e-08, -0.41000262, 0.07525045, 0.0505194, 0.00932234)
+transform = Transform3D(6.395128e-09, 1, -6.148555e-08, 0.7764646, -4.371138e-08, -0.63016075, -0.63016075, -4.371139e-08, -0.7764646, 0.03646557, 0.05658868, 0.009882165)
+hand_pose = SubResource("Resource_lrdtm")
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="."]
 script = ExtResource("3_h7tcp")

@@ -32,7 +32,7 @@ script = ExtResource("1_q7jtf")
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("2_72a1m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041183606, 0, -0.057213448)
+transform = Transform3D(1, 0, 0, 0, 0.6075561, 0.7942768, 0, -0.7942768, 0.6075561, 0.00038754195, -0.06257816, -0.12607299)
 visible = false
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="."]
@@ -40,14 +40,15 @@ script = ExtResource("3_5fkek")
 metadata/_custom_type_script = "uid://bpahxy24ocofs"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="XRToolsHighlightVisible"]
-transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_q7jtf")
 mesh = SubResource("ArrayMesh_72a1m")
 skeleton = NodePath("../../Fries")
 
 [node name="Fries" parent="." instance=ExtResource("4_q7jtf")]
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)
 layers = 65537
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
+transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_q7jtf")

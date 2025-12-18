@@ -1,10 +1,8 @@
-[gd_resource type="Resource" script_class="XRToolsHandPoseSettings" load_steps=4 format=3 uid="uid://dmpjtk0l8vh6v"]
+[gd_resource type="Resource" script_class="XRToolsHandPoseSettings" load_steps=3 format=3 uid="uid://dmpjtk0l8vh6v"]
 
-[ext_resource type="Animation" uid="uid://ccds2u22gbxn7" path="res://addons/godot-xr-tools/hands/animations/right/Grip.res" id="1_o7bqr"]
+[ext_resource type="Animation" uid="uid://dg4v7rqiaje2h" path="res://addons/godot-xr-tools/hands/animations/right/Pinch Flat.res" id="1_1oga3"]
 [ext_resource type="Script" uid="uid://bs5s4h0jby5nq" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="1_ytvcl"]
-[ext_resource type="Animation" uid="uid://ky28birj4su6" path="res://addons/godot-xr-tools/hands/animations/right/Default pose.res" id="2_oh03w"]
 
 [resource]
 script = ExtResource("1_ytvcl")
-open_pose = ExtResource("2_oh03w")
-closed_pose = ExtResource("1_o7bqr")
+closed_pose = ExtResource("1_1oga3")

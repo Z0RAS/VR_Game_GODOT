@@ -43,6 +43,7 @@ editor_preview_mode = 1
 [node name="GrabPointHandRight" parent="." instance=ExtResource("2_sflaf")]
 transform = Transform3D(-0.11350562, 0.99325293, -0.023779556, 0.97822773, 0.107538976, -0.1775018, -0.173747, -0.043409314, -0.98383355, -0.0046103215, 0.0045152884, 0.08567608)
 hand_pose = ExtResource("5_adgb7")
+editor_preview_mode = 1
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="."]
 script = ExtResource("3_qpye6")

@@ -139,15 +139,6 @@ material_override = SubResource("StandardMaterial3D_7idhg")
 mesh = SubResource("ArrayMesh_7idhg")
 skeleton = NodePath("../../HotSauce")
 
-[node name="ItemLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-visible = false
-pixel_size = 0.0004
-texture_filter = 0
-text = "Sveiki"
-font_size = 60
-outline_size = 16
-
 [node name="HotSauce" parent="." instance=ExtResource("4_7idhg")]
 
 [node name="CollisionShape3D32" type="CollisionShape3D" parent="."]

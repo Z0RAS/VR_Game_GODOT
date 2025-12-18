@@ -513,7 +513,7 @@ func _finish_order_scoring():
 	# Teisingi ir neteisingi objektai
 	for item in placed_items:
 		if item.correct:
-			score += 20
+			score += 50
 		else:
 			score -= 3
 	# Eiliškumo bonusas

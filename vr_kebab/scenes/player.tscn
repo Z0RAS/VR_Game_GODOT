@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://dcuob2qjcsqgy" path="res://sound/StreetAmbience.mp3" id="10_d2wvv"]
 [ext_resource type="AudioStream" uid="uid://gsng4jcdawxy" path="res://sound/ForestAmbience.mp3" id="11_3v2ag"]
 
-[sub_resource type="Resource" id="Resource_jej6c"]
+[sub_resource type="Resource" id="Resource_3v2ag"]
 script = ExtResource("3_3v2ag")
 metadata/_custom_type_script = "uid://bs5s4h0jby5nq"
 
@@ -29,7 +29,7 @@ tracker = &"left_hand"
 
 [node name="LeftHand" parent="LeftHand" instance=ExtResource("1_ur7pv")]
 hand_material_override = ExtResource("2_y4r1p")
-default_pose = SubResource("Resource_jej6c")
+default_pose = SubResource("Resource_3v2ag")
 
 [node name="FunctionPickup" parent="LeftHand" instance=ExtResource("3_d2wvv")]
 grab_distance = 0.1
@@ -44,14 +44,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
 
 [node name="RightHand" parent="RightHand" instance=ExtResource("5_jej6c")]
+trigger_action = "grip"
 
 [node name="FunctionTeleport" parent="RightHand" instance=ExtResource("6_f1ej7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.32, 0, 0, 0)
+visible = false
 enabled = false
 player_height = 0.4
 
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("3_d2wvv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008641481, 0)
+visible = false
 grab_distance = 0.03
 
 [node name="MovementDirect" parent="RightHand" instance=ExtResource("7_oprun")]
@@ -61,6 +64,7 @@ turn_mode = 2
 smooth_turn_speed = 4.0
 
 [node name="FunctionPointer" parent="RightHand" instance=ExtResource("4_3v2ag")]
+visible = false
 y_offset = 0.0
 show_laser = 2
 laser_length = 1
