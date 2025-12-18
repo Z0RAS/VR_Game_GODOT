@@ -21,6 +21,9 @@ var idle_time := 0.0
 var idle_cooldown := 0.0
 var current_pose: Dictionary = {}
 var target_pose: Dictionary = {}
+var move_stage: String = ""
+var is_leaving: bool = false
+var speed: float = 2.5
 
 @export var pose_lerp_speed := 2.5  # Greitis, kaip greitai pereina tarp pozų
 

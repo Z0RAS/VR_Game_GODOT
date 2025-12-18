@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=4 uid="uid://balta7jpa70ks"]
+[gd_scene load_steps=118 format=4 uid="uid://balta7jpa70ks"]
 
 [ext_resource type="Script" uid="uid://b5jqq6v6m8isx" path="res://scenes/main.gd" id="1_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://comtkru161q6j" path="res://scenes/foods/SpecialMeat.tscn" id="2_5he1u"]
@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://dsntq6120767d" path="res://scenes/counter2.tscn" id="23_y6deb"]
 [ext_resource type="PackedScene" uid="uid://bbqpfvmsgn7as" path="res://models/Buildings/old_radio.glb" id="24_j8jky"]
 [ext_resource type="PackedScene" uid="uid://838q43q017ym" path="res://scenes/foods/Chicken.tscn" id="24_og1vs"]
-[ext_resource type="AudioStream" uid="uid://1u74khirtati" path="res://sound/music/Music3.mp3" id="25_dgi5k"]
 [ext_resource type="PackedScene" uid="uid://c78jhsnnevwqh" path="res://scenes/foods/Beef.tscn" id="26_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://bera66qwy6ccy" path="res://models/Buildings/lab_tube_for_p.a.l.glb" id="26_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://qjxqj3r0vbaq" path="res://models/Buildings/simple_building.glb" id="27_2f3dj"]
@@ -45,6 +44,19 @@
 [ext_resource type="PackedScene" uid="uid://cxbwr3vcytqfe" path="res://scenes/foods/HotSauce.tscn" id="35_vchkt"]
 [ext_resource type="PackedScene" uid="uid://cj6bcf7qtwjbr" path="res://scenes/foods/Ketchup.tscn" id="36_txyw0"]
 [ext_resource type="PackedScene" uid="uid://dihbwo7blm0ir" path="res://scenes/foods/GarlicSauce.tscn" id="37_vc5cj"]
+[ext_resource type="AudioStream" uid="uid://b0rwq5p56oaqx" path="res://sound/music/Ad.wav" id="45_j2jfr"]
+[ext_resource type="AudioStream" uid="uid://c8tu1h85polom" path="res://sound/music/Music1.wav" id="46_bjg73"]
+[ext_resource type="AudioStream" uid="uid://cxctyva3diw4n" path="res://sound/music/Music2.wav" id="47_bu4jf"]
+[ext_resource type="AudioStream" uid="uid://1u74khirtati" path="res://sound/music/Music3.mp3" id="48_o7ddy"]
+[ext_resource type="AudioStream" uid="uid://b62d1s7v17ivs" path="res://sound/music/Music4.mp3" id="49_0loja"]
+[ext_resource type="AudioStream" uid="uid://bpjiiupkclig" path="res://sound/music/Music5.mp3" id="50_ids8r"]
+[ext_resource type="AudioStream" uid="uid://j8bom63ouvvw" path="res://sound/sfx/DoorOpen.mp3" id="51_1v6qk"]
+[ext_resource type="AudioStream" uid="uid://b507687a6n3uf" path="res://sound/sfx/ButtonPress.mp3" id="52_augu2"]
+[ext_resource type="AudioStream" uid="uid://cs6yrhds48q5y" path="res://sound/sfx/Correct.mp3" id="53_tm6hj"]
+[ext_resource type="AudioStream" uid="uid://bpklxd1o0kree" path="res://sound/sfx/Incorrect.mp3" id="54_kf5aa"]
+[ext_resource type="AudioStream" uid="uid://ok8yglb5r5pp" path="res://sound/sfx/Hello.mp3" id="55_t5ykj"]
+[ext_resource type="AudioStream" uid="uid://dnvavsf0x2j6o" path="res://sound/sfx/ItemAdded.mp3" id="56_e755i"]
+[ext_resource type="AudioStream" uid="uid://b44lhgw7umukj" path="res://sound/sfx/KvotaReached.mp3" id="57_ro3en"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dgi5k"]
 panorama = ExtResource("12_5q0nq")
@@ -596,6 +608,8 @@ transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09
 script = ExtResource("18_vxglm")
 lift_button = NodePath("../Buttons/UpButton")
 lower_button = NodePath("../Buttons/DownButton")
+door_open_sfx = ExtResource("51_1v6qk")
+door_close_sfx = ExtResource("51_1v6qk")
 
 [node name="Viewport2Din3D" parent="Building/Door" instance=ExtResource("20_5he1u")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.95865357, 3.0034218, -1.4785883)
@@ -644,9 +658,8 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.3436852, 2.6061404, 
 transform = Transform3D(-0.00096696964, 0, 0.009953138, 0, 0.01, 0, -0.009953138, 0, -0.00096696964, -2.326269, 2.8451455, -5.0218854)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Building/Radio"]
-stream = ExtResource("25_dgi5k")
+volume_db = -18.0
 autoplay = true
-parameters/looping = true
 
 [node name="ChickenTube" parent="Building" instance=ExtResource("26_kmb1v")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.5522418, 2.3728518, -6.158097)
@@ -855,6 +868,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5711331, -4.341052)
 
 [node name="OrderZone" type="MeshInstance3D" parent="OrderZone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.299, 0.042128086)
+visible = false
 material_override = SubResource("StandardMaterial3D_cjqg0")
 mesh = SubResource("BoxMesh_vxglm")
 
@@ -970,7 +984,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5791764, 0.3080654, 
 visible = false
 mesh = SubResource("BoxMesh_cjqg0")
 
-[node name="OrderTerminal" parent="." node_paths=PackedStringArray("order_zone_root") instance=ExtResource("28_yq6so")]
+[node name="OrderTerminal" parent="." node_paths=PackedStringArray("order_zone_root", "radio_player") instance=ExtResource("28_yq6so")]
 transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, -0.022964299, 1.5593586, -5.5332828)
 speechBubbleOrderLabel = NodePath("../SpeechBubble/SpeechBubbleOrder")
 watched_door_path = NodePath("../Building/Door")
@@ -980,5 +994,13 @@ exit_point_path = NodePath("../WalkPoints/Exit")
 corner_entry_point_path = NodePath("../WalkPoints/Corner_entry")
 corner_exit_point_path = NodePath("../WalkPoints/Corner_exit")
 product_scenes = Array[PackedScene]([ExtResource("26_2wyq8"), ExtResource("27_vxglm"), ExtResource("24_og1vs"), ExtResource("14_pibwh"), ExtResource("33_2cjbq"), ExtResource("34_chjal"), ExtResource("35_vchkt"), ExtResource("36_txyw0"), ExtResource("37_vc5cj")])
-product_spawn_points = Array[NodePath]([NodePath("../FoodSpawners/BeefSpawn"), NodePath("../FoodSpawners/PorkSpawn"), NodePath("../FoodSpawners/ChickenSpawn"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/PotatoeSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner"), NodePath("../FoodSpawners/SauceSpawner")])
 order_zone_root = NodePath("../OrderZone")
+radio_player = NodePath("../Building/Radio/AudioStreamPlayer3D")
+radio_tracks = Array[AudioStream]([ExtResource("45_j2jfr"), ExtResource("46_bjg73"), ExtResource("47_bu4jf"), ExtResource("48_o7ddy"), ExtResource("49_0loja"), ExtResource("50_ids8r")])
+door_open_sfx = ExtResource("51_1v6qk")
+button_sfx = ExtResource("52_augu2")
+confirm_correct_sfx = ExtResource("53_tm6hj")
+confirm_wrong_sfx = ExtResource("54_kf5aa")
+npc_greet_sfx = ExtResource("55_t5ykj")
+item_added_sfx = ExtResource("56_e755i")
+qouta_reached_sfx = ExtResource("57_ro3en")
