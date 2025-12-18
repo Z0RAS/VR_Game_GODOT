@@ -396,9 +396,6 @@ section_rings = 1
 
 [sub_resource type="BoxMesh" id="BoxMesh_dgi5k"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_y6deb"]
-size = Vector3(0.5, 0.5, 0.5)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5he1u"]
 transparency = 1
 albedo_color = Color(0.11902017, 0.4951529, 0.41536504, 0.2509804)
@@ -442,6 +439,9 @@ size = Vector3(1, 2, 1)
 size = Vector3(1, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_cjqg0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1v6qk"]
+size = Vector3(0.1, 0.1, 0.1)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_c6pm6")
@@ -790,7 +790,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2678947, 0.98442984, -13.7
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1141677, 0.063100815, -9.272939)
 
 [node name="Sketchfab_Scene4" parent="Houses" instance=ExtResource("27_2f3dj")]
-transform = Transform3D(-1, 0, 3.821371e-15, 0, 1, -8.742278e-08, -3.821371e-15, -8.742278e-08, -1, 2.9772806, 0.063100815, -1.0038276)
+transform = Transform3D(-1, 0, 3.821371e-15, 0, 1, -8.742278e-08, -3.821371e-15, -8.742278e-08, -1, 2.9754395, 0.048216343, -0.9996028)
 
 [node name="Sketchfab_Scene5" parent="Houses" instance=ExtResource("27_2f3dj")]
 transform = Transform3D(-1, 0, 3.821371e-15, 0, 1, -8.742278e-08, -3.821371e-15, -8.742278e-08, -1, 9.337372, 0.063100815, -1.0038276)
@@ -803,10 +803,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.695152, 0.063100815, -9.272
 
 [node name="Sketchfab_Scene3" parent="Houses" instance=ExtResource("27_2f3dj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.04455, 0.06310105, -9.272939)
-
-[node name="PlayerSpawn" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1461194, 0.27868438, -5.0967607)
-mesh = SubResource("BoxMesh_y6deb")
 
 [node name="Knife" parent="." instance=ExtResource("28_tel4y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9161601, 1.7509274, -6.030639)
@@ -996,3 +992,8 @@ qouta_reached_sfx = ExtResource("57_ro3en")
 
 [node name="Knife2" parent="." instance=ExtResource("28_tel4y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1932669, 1.6031997, -6.2904816)
+
+[node name="PlayerSpawn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0712879, 1.3437935, -4.719652)
+visible = false
+mesh = SubResource("BoxMesh_1v6qk")

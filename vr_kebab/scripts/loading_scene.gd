@@ -72,34 +72,20 @@ func start_vr_and_load_game() -> void:
 	visible = false
 
 
-func spawn_player(game_root: Node) -> void:
+func spawn_player(game_root: Node3D) -> void:
 	var player_scene := preload(PLAYER_SCENE_PATH)
-	var player := player_scene.instantiate() as Node3D
+	var player := player_scene.instantiate() as XROrigin3D
+	game_root.add_child(player)
 
-	var xr_origin: Node3D = game_root.get_node_or_null("XROrigin3D")
-	if xr_origin:
-		xr_origin.add_child(player)
-	else:
-		game_root.add_child(player)
-
-	var spawn_point: Node3D = game_root.get_node_or_null("PlayerSpawn")
-	if spawn_point:
-		if xr_origin:
-			player.transform = xr_origin.global_transform.affine_inverse() * spawn_point.global_transform
-		else:
-			player.global_transform = spawn_point.global_transform
-
-		spawn_point.visible = false
-	else:
-		player.global_position = Vector3(-1.4, 1.12, -5)
+	var spawn := game_root.get_node_or_null("PlayerSpawn")
+	if not spawn:
+		return
 
 	await get_tree().process_frame
-	# After player spawn
-	visible = false
-	queue_free() 
+	await get_tree().process_frame
 
-
-
+	# perkeliam tracking space, ne node transformą
+	player.set_global_position(spawn.global_position)
 
 
 
