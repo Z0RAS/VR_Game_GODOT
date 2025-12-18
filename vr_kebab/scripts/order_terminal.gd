@@ -406,6 +406,8 @@ func new_combination() -> Array:
 	return combination
 
 func _on_food_button_pressed(index: int):
+	if not active_order:
+		return
 	AudioManager.play_sfx(button_sfx)
 	var item_data = ITEMS.get(index, null)
 	if item_data == null:
@@ -559,6 +561,8 @@ func _prepare_end_of_day(success: bool):
 	label_2d.text = "🏁 Kvota pasiekta. Diena baigta.\nKitai dienai atidarykite duris."
 
 func _on_delete_pressed():
+	if not active_order:
+		return
 	AudioManager.play_sfx(button_sfx)
 	if selected_items.is_empty():
 		label_2d.text = "🗑️ Nėra ką trinti."

@@ -72,6 +72,7 @@ show_target = true
 collide_with_areas = true
 
 [node name="PlayerBody" parent="." instance=ExtResource("9_qfm1y")]
+collision_mask = 524288
 push_rigid_bodies = false
 ground_control = 2
 

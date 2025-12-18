@@ -41,6 +41,7 @@ metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
 [node name="GrabPointHandRight" parent="." instance=ExtResource("2_w4jgl")]
 transform = Transform3D(6.395128e-09, 1, -6.148555e-08, 0.7764646, -4.371138e-08, -0.63016075, -0.63016075, -4.371139e-08, -0.7764646, 0.03646557, 0.05658868, 0.009882165)
+visible = false
 hand_pose = SubResource("Resource_lrdtm")
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="."]

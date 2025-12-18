@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cjtpxno41i2ap"]
+[gd_scene load_steps=34 format=4 uid="uid://cjtpxno41i2ap"]
 
 [ext_resource type="Texture2D" uid="uid://deuyc41vgrmjf" path="res://models/Buildings/garage_door_0.png" id="1_83dcw"]
 [ext_resource type="Texture2D" uid="uid://bxd4fwd0dseax" path="res://models/Buildings/garage_door_1.png" id="2_la1wf"]
@@ -466,6 +466,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_clqp1")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_83dcw"]
+size = Vector3(30.931152, 31.429932, 0.98046875)
+
 [node name="Door" type="Node3D"]
 
 [node name="DoorSection1_1" type="Node3D" parent="."]
@@ -565,3 +568,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.005573, -0.8630062)
 [node name="Object_32" type="MeshInstance3D" parent="DoorSection14_14"]
 mesh = SubResource("ArrayMesh_2ugda")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 524289
+collision_mask = 524289
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05444336, -0.07849121, -0.5810547)
+shape = SubResource("BoxShape3D_83dcw")

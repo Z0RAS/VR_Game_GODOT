@@ -55,8 +55,8 @@ skeleton = NodePath("")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 disable_mode = 1
-collision_layer = 65537
-collision_mask = 65537
+collision_layer = 589825
+collision_mask = 589825
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0059509277, -0.29403687, -0.028076172)

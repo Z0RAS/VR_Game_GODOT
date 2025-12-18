@@ -489,6 +489,8 @@ mesh = SubResource("BoxMesh_fuf3a")
 
 [node name="LeftWall" type="StaticBody3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.8, -6.692)
+collision_layer = 524289
+collision_mask = 524289
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Building/LeftWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.916855e-05, -0.0025906563, -0.0016508102)
@@ -501,6 +503,8 @@ shape = SubResource("BoxShape3D_getpj")
 
 [node name="RightWall" type="StaticBody3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.8, -3.449)
+collision_layer = 524289
+collision_mask = 524289
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Building/RightWall"]
 material_override = SubResource("StandardMaterial3D_yq6so")
@@ -512,6 +516,8 @@ shape = SubResource("BoxShape3D_getpj")
 
 [node name="BackWall" type="StaticBody3D" parent="Building"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.6378732, 1.7526608, -5.0574164)
+collision_layer = 524289
+collision_mask = 524289
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Building/BackWall"]
 material_override = SubResource("StandardMaterial3D_fv21b")
@@ -523,12 +529,16 @@ shape = SubResource("BoxShape3D_d13ii")
 
 [node name="Kebab" parent="Building" instance=ExtResource("17_muem4")]
 transform = Transform3D(-3.343921e-08, -0.765, -3.343921e-08, 0, -3.343921e-08, 0.765, -0.765, 3.343921e-08, 1.4616744e-15, -2.0129182, 1.0732131, -4.0451875)
+collision_layer = 524289
+collision_mask = 524289
 
 [node name="Counter" parent="Building" instance=ExtResource("18_dp3eg")]
 transform = Transform3D(-0.8, -7.54979e-08, -6.600236e-15, 0, -2.1855694e-08, 1, -1.2079664e-07, 0.5, 4.371139e-08, -2.1126943, 3.2185437e-07, -4.3631706)
 
 [node name="Roof" type="StaticBody3D" parent="Building"]
 transform = Transform3D(-4.371139e-08, 0.9998477, -0.017452352, 0, -0.017452352, -0.9998477, -1, -4.370473e-08, 7.6286655e-10, -1.0102831, 3.69733, -5.076459)
+collision_layer = 524289
+collision_mask = 524289
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Building/Roof"]
 material_override = SubResource("StandardMaterial3D_5q0nq")
@@ -540,6 +550,8 @@ shape = SubResource("BoxShape3D_0ld40")
 
 [node name="Floor" type="StaticBody3D" parent="Building"]
 transform = Transform3D(-4.371139e-08, 0.9998477, -0.017452352, 0, -0.017452352, -0.9998477, -1, -4.370473e-08, 7.6286655e-10, -1.0839475, -0.064826176, -5.0487466)
+collision_layer = 524289
+collision_mask = 524289
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Building/Floor"]
 material_override = SubResource("StandardMaterial3D_vxglm")
@@ -553,11 +565,11 @@ shape = SubResource("BoxShape3D_0ld40")
 
 [node name="Counter2" parent="Building" instance=ExtResource("23_y6deb")]
 transform = Transform3D(-1.2894859e-08, 0, 0.1, 0, 0.4, 0, -0.295, 0, -4.371139e-09, -1.5729272, 0.801087, -6.113384)
-layers = 65537
+layers = 589825
 
 [node name="Counter3" parent="Building" instance=ExtResource("23_y6deb")]
 transform = Transform3D(-0.36, 0, -2.2649372e-08, 0, 0.4, 0, 5.435849e-08, 0, -0.15, -0.054142736, 0.801087, -5.039281)
-layers = 65537
+layers = 589825
 
 [node name="FrontWall2" type="StaticBody3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46624815, 0.49630976, -5.026095)
