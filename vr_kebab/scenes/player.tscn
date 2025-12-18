@@ -64,7 +64,6 @@ turn_mode = 2
 smooth_turn_speed = 4.0
 
 [node name="FunctionPointer" parent="RightHand" instance=ExtResource("4_3v2ag")]
-visible = false
 y_offset = 0.0
 show_laser = 2
 laser_length = 1
@@ -73,7 +72,6 @@ collide_with_areas = true
 
 [node name="PlayerBody" parent="." instance=ExtResource("9_qfm1y")]
 collision_mask = 524288
-push_rigid_bodies = false
 ground_control = 2
 
 [node name="SFXPlayer" type="AudioStreamPlayer3D" parent="."]

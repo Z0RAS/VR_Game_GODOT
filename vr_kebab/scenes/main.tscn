@@ -142,7 +142,7 @@ uv1_triplanar = true
 size = Vector3(3, 3, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0ld40"]
-size = Vector3(3, 3, 0.3)
+size = Vector3(3, 3, 0.34868163)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxglm"]
 albedo_texture = ExtResource("21_pm3ni")
@@ -559,12 +559,13 @@ mesh = SubResource("BoxMesh_dp3eg")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Building/Floor"]
+transform = Transform3D(1, -2.8066438e-13, 8.770762e-15, 0, 1, -3.3340497e-17, 0, -3.3340666e-17, 1, 0, -3.5762787e-07, -0.024340797)
 shape = SubResource("BoxShape3D_0ld40")
 
 [node name="Foods" type="Node" parent="Building"]
 
 [node name="Counter2" parent="Building" instance=ExtResource("23_y6deb")]
-transform = Transform3D(-1.2894859e-08, 0, 0.1, 0, 0.4, 0, -0.295, 0, -4.371139e-09, -1.5729272, 0.801087, -6.113384)
+transform = Transform3D(-1.0232832e-08, 0, 0.1, 0, 0.4, 0, -0.23409991, 0, -4.371139e-09, -1.5729272, 0.801087, -6.224568)
 layers = 589825
 
 [node name="Counter3" parent="Building" instance=ExtResource("23_y6deb")]
@@ -904,28 +905,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.236666, 0, -5.756935)
 visible = false
 
 [node name="SpawnPoint" type="Node3D" parent="WalkPoints"]
-transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.4493504, 0.25235754, -3.930789)
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.449, -0.2, -3.931)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/SpawnPoint"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5691438, 0)
 mesh = SubResource("BoxMesh_c6pm6")
 
 [node name="Corner_entry" type="Node3D" parent="WalkPoints"]
-transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.4493504, 0.25235754, -0.43893385)
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.449, -0.2, -0.439)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/Corner_entry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5691438, 0)
 mesh = SubResource("BoxMesh_c6pm6")
 
 [node name="Counter" type="Node3D" parent="WalkPoints"]
-transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, -17.211, 0.04626012, 0.852)
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, -17.211, -0.2, 0.852)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/Counter"]
 visible = false
 mesh = SubResource("BoxMesh_5poiv")
 
 [node name="Exit" type="Node3D" parent="WalkPoints"]
-transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.019741, 0.24061325, 4.789353)
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.02, -0.2, 4.789)
 visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/Exit"]
@@ -933,7 +934,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5729985, 0)
 mesh = SubResource("BoxMesh_2cjbq")
 
 [node name="Corner_exit" type="Node3D" parent="WalkPoints"]
-transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.019741, 0.24061325, 1.4061623)
+transform = Transform3D(1, 0, 0, 0, 0.065, 0, 0, 0, 1, 1.02, -0.2, 1.406)
 visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WalkPoints/Corner_exit"]
