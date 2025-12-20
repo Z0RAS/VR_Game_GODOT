@@ -120,6 +120,7 @@ points = PackedVector3Array(-0.15734571, 0.5569235, 0.026338184, -0.1864416, 0.4
 [node name="HotSauce" type="RigidBody3D" groups=["Padazas1"]]
 collision_layer = 4
 collision_mask = 196615
+mass = 2.0
 freeze_mode = 1
 script = ExtResource("1_02o1b")
 picked_up_layer = 65537

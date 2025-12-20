@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=4 uid="uid://balta7jpa70ks"]
+[gd_scene load_steps=119 format=4 uid="uid://balta7jpa70ks"]
 
 [ext_resource type="Script" uid="uid://b5jqq6v6m8isx" path="res://scenes/main.gd" id="1_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://comtkru161q6j" path="res://scenes/foods/SpecialMeat.tscn" id="2_5he1u"]
@@ -385,6 +385,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nvyfr")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1v6qk"]
+size = Vector3(0.31350708, 0.5802002, 0.4827881)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txyw0"]
 shading_mode = 0
 albedo_color = Color(0.90576285, 0.8176433, 0.35686442, 1)
@@ -670,6 +673,12 @@ skeleton = NodePath("")
 
 [node name="Sketchfab_Scene" parent="Building" instance=ExtResource("27_fuf3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003721144, 1.2499691, -4.262538)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Building/Sketchfab_Scene"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Building/Sketchfab_Scene/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026809696, -0.2098999, 0.0033569336)
+shape = SubResource("BoxShape3D_1v6qk")
 
 [node name="Outside" type="Node3D" parent="."]
 
@@ -994,6 +1003,6 @@ qouta_reached_sfx = ExtResource("57_ro3en")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1932669, 1.6031997, -6.2904816)
 
 [node name="PlayerSpawn" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0712879, 1.3437935, -4.719652)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1628349, 1.3437935, -4.719652)
 visible = false
 mesh = SubResource("BoxMesh_1v6qk")

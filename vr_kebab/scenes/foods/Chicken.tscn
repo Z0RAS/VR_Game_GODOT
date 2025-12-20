@@ -62,6 +62,7 @@ _surfaces = [{
 [node name="Chicken" type="RigidBody3D" groups=["Mesa3"]]
 collision_layer = 4
 collision_mask = 196615
+mass = 2.0
 freeze_mode = 1
 script = ExtResource("1_j2d5j")
 picked_up_layer = 65537

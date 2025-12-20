@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpt88phagjqfv"]
+[gd_scene load_steps=15 format=3 uid="uid://dpt88phagjqfv"]
 
 [ext_resource type="PackedScene" uid="uid://bpdj5njb8nhot" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_fullglove_hand.tscn" id="1_ur7pv"]
 [ext_resource type="Material" uid="uid://p0q2df2dmy62" path="res://addons/godot-xr-tools/hands/materials/ghost_hand.tres" id="2_y4r1p"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="5_jej6c"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="7_oprun"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="8_a8ls1"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="8_d2wvv"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="9_qfm1y"]
 [ext_resource type="AudioStream" uid="uid://dcuob2qjcsqgy" path="res://sound/StreetAmbience.mp3" id="10_d2wvv"]
 [ext_resource type="AudioStream" uid="uid://gsng4jcdawxy" path="res://sound/ForestAmbience.mp3" id="11_3v2ag"]
@@ -14,6 +15,12 @@
 [sub_resource type="Resource" id="Resource_3v2ag"]
 script = ExtResource("3_3v2ag")
 metadata/_custom_type_script = "uid://bs5s4h0jby5nq"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2wvv"]
+albedo_color = Color(0.46666667, 0.43529412, 0.27450982, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3v2ag"]
+albedo_color = Color(0.73333335, 0.23137255, 0.14901961, 1)
 
 [node name="Player" type="XROrigin3D"]
 current = true
@@ -46,8 +53,18 @@ grab_distance = 0.03
 turn_mode = 2
 smooth_turn_speed = 4.0
 
+[node name="FunctionPointer" parent="RightHand" instance=ExtResource("8_d2wvv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034131616, 0.012002036, 0)
+show_laser = 2
+laser_length = 1
+laser_material = SubResource("StandardMaterial3D_d2wvv")
+laser_hit_material = SubResource("StandardMaterial3D_3v2ag")
+show_target = true
+target_radius = 0.01
+
 [node name="PlayerBody" parent="." instance=ExtResource("9_qfm1y")]
 collision_mask = 524288
+player_calibrate_height = false
 
 [node name="SFXPlayer" type="AudioStreamPlayer3D" parent="."]
 

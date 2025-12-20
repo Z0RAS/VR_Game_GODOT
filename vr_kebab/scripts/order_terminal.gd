@@ -423,21 +423,21 @@ func _on_food_button_pressed(index: int):
 						return ITEMS[key].label
 				return tag)
 		)
-		var item_cost = product_costs[index] * product_discount
-		if Global.money < item_cost:
-			label_2d.text = "❌ Neužtenka pinigų!"
-			return
-		Global.money -= int(item_cost)
-		_update_money_label()
-		# Spawninam objektą
-		if index < product_scenes.size() and index < product_spawn_points.size():
-			var scene = product_scenes[index]
-			var spawn_point = get_node(product_spawn_points[index])
-			if scene and spawn_point:
-				var instance = scene.instantiate()
-				get_parent().add_child(instance)
-				instance.global_position = spawn_point.global_position
-				instance.set_meta("tag", item_data.tag)
+	var item_cost = product_costs[index] * product_discount
+	if Global.money < item_cost:
+		label_2d.text = "❌ Neužtenka pinigų!"
+		return
+	Global.money -= int(item_cost)
+	_update_money_label()
+	# Spawninam objektą
+	if index < product_scenes.size() and index < product_spawn_points.size():
+		var scene = product_scenes[index]
+		var spawn_point = get_node(product_spawn_points[index])
+		if scene and spawn_point:
+			var instance = scene.instantiate()
+			get_parent().add_child(instance)
+			instance.global_position = spawn_point.global_position
+			instance.set_meta("tag", item_data.tag)
 
 func _on_confirm_pressed():
 	AudioManager.play_sfx(button_sfx)

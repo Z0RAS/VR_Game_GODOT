@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://jt0m3uudxduh"]
+[gd_scene load_steps=17 format=4 uid="uid://jt0m3uudxduh"]
 
 [ext_resource type="Texture2D" uid="uid://clm68ydndp7sj" path="res://models/counter1/bar_counter_lowpoly_0.png" id="1_jw0do"]
 [ext_resource type="Texture2D" uid="uid://cafmnelfpjc1g" path="res://models/counter1/bar_counter_lowpoly_1.png" id="2_3jo6w"]
@@ -53,13 +53,16 @@ shadow_mesh = SubResource("ArrayMesh_hj30m")
 size = Vector3(0.6865463, 2.2388306, 1.0637665)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vmgu0"]
-size = Vector3(0.16000366, 0.83865356, 1.0643768)
+size = Vector3(0.16000366, 0.83865356, 1.0697861)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6id1p"]
 size = Vector3(0.16000366, 0.83865356, 1.0782089)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jsx0j"]
-size = Vector3(0.5242615, 0.9871979, 0.93674755)
+size = Vector3(0.5242615, 0.9871979, 0.9029441)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lnt6r"]
+size = Vector3(0.5242615, 0.20151138, 1.0773265)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ohic1"]
 size = Vector3(0.6413193, 0.062202454, 0.25450706)
@@ -71,7 +74,13 @@ size = Vector3(0.6413193, 0.062202454, 0.25450706)
 size = Vector3(0.5809746, 3.0073395, 1.2254257)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_blfow"]
-size = Vector3(0.18588257, 0.83865356, 1.0719452)
+size = Vector3(0.1907196, 0.83865356, 1.0719452)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0duwa"]
+size = Vector3(0.030828476, 0.058590412, 0.24606085)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_07h02"]
+size = Vector3(0.11355877, 0.09619057, 0.049788237)
 
 [node name="Counter" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
@@ -91,7 +100,7 @@ shape = SubResource("BoxShape3D_jyhvf")
 debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4968109, -1.0731453, 0.5340805)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4968109, -1.0731453, 0.5367851)
 shape = SubResource("BoxShape3D_vmgu0")
 debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)
 
@@ -101,8 +110,13 @@ shape = SubResource("BoxShape3D_6id1p")
 debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15799546, -1.0022352, 0.468267)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15799546, -1.0022352, 0.45136526)
 shape = SubResource("BoxShape3D_jsx0j")
+debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15799546, -1.3950784, 0.5385565)
+shape = SubResource("BoxShape3D_lnt6r")
 debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D"]
@@ -121,6 +135,16 @@ shape = SubResource("BoxShape3D_yy3m6")
 debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(-4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0, 1, -0.004809557, -0.69151735, 0.5378647)
+transform = Transform3D(-4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 0, 0, 1, -0.004809557, -0.6939359, 0.5378647)
 shape = SubResource("BoxShape3D_blfow")
+debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.371138e-08, 0.9999999, 0, -0.9999998, -4.371138e-08, -0.00036651912, -0.00036651912, -1.6021058e-11, 0.99999994, 0.039100703, -1.0407205, 1.1909001)
+shape = SubResource("BoxShape3D_0duwa")
+debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.371138e-08, 0.9999999, 0, -0.9999998, -4.371138e-08, -0.00036651912, -0.00036651912, -1.6021058e-11, 0.99999994, 0.033918865, -1.109319, 1.0927789)
+shape = SubResource("BoxShape3D_07h02")
 debug_color = Color(0.92765754, 0.3433294, 0.46242812, 1)

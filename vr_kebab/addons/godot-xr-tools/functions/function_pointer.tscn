@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqhw276realc"]
 
 [ext_resource type="Material" path="res://addons/godot-xr-tools/materials/pointer.tres" id="1"]
-[ext_resource type="Script" path="res://addons/godot-xr-tools/functions/function_pointer.gd" id="2"]
+[ext_resource type="Script" uid="uid://dvjni84cdimdc" path="res://addons/godot-xr-tools/functions/function_pointer.gd" id="2"]
 
 [sub_resource type="BoxMesh" id="1"]
 resource_local_to_scene = true
@@ -11,8 +11,8 @@ subdivide_depth = 20
 
 [sub_resource type="SphereMesh" id="2"]
 material = ExtResource("1")
-radius = 0.05
-height = 0.1
+radius = 0.01
+height = 0.02
 radial_segments = 16
 rings = 8
 
@@ -24,6 +24,7 @@ script = ExtResource("2")
 
 [node name="RayCast" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.013, 0)
+visible = false
 target_position = Vector3(0, 0, -10)
 collision_mask = 5242880
 

@@ -27,6 +27,7 @@ points = PackedVector3Array(-0.26523668, -0.061470777, -1.0302546, 0.4742036, 0.
 [node name="Ketchup" type="RigidBody3D" groups=["Padazas2"]]
 collision_layer = 4
 collision_mask = 196615
+mass = 2.0
 freeze_mode = 1
 script = ExtResource("1_688w7")
 picked_up_layer = 65537

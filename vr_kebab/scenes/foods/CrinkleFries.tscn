@@ -27,6 +27,7 @@ points = PackedVector3Array(0.12185165, -1.9565517, -1.7466202, -0.31440684, 0.6
 [node name="PickableObject" type="RigidBody3D" groups=["Bulves2"]]
 collision_layer = 4
 collision_mask = 196615
+mass = 2.0
 freeze_mode = 1
 script = ExtResource("1_q7jtf")
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
