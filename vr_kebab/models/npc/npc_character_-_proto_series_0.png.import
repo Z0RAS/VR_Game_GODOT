@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://byco4n6w2edpk"
 path.s3tc="res://.godot/imported/npc_character_-_proto_series_0.png-5a70effaad70b0300d77d41da0468bcb.s3tc.ctex"
+path.etc2="res://.godot/imported/npc_character_-_proto_series_0.png-5a70effaad70b0300d77d41da0468bcb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/npc/npc_character_-_proto_series_0.png"
-dest_files=["res://.godot/imported/npc_character_-_proto_series_0.png-5a70effaad70b0300d77d41da0468bcb.s3tc.ctex"]
+dest_files=["res://.godot/imported/npc_character_-_proto_series_0.png-5a70effaad70b0300d77d41da0468bcb.s3tc.ctex", "res://.godot/imported/npc_character_-_proto_series_0.png-5a70effaad70b0300d77d41da0468bcb.etc2.ctex"]
 
 [params]
 

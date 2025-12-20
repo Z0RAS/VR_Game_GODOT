@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqpwm68sgvfk6"
 path.s3tc="res://.godot/imported/BrickFloor.jpg-48e4cfc1da503087d7ad67466bac2fdc.s3tc.ctex"
+path.etc2="res://.godot/imported/BrickFloor.jpg-48e4cfc1da503087d7ad67466bac2fdc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/BrickFloor.jpg"
-dest_files=["res://.godot/imported/BrickFloor.jpg-48e4cfc1da503087d7ad67466bac2fdc.s3tc.ctex"]
+dest_files=["res://.godot/imported/BrickFloor.jpg-48e4cfc1da503087d7ad67466bac2fdc.s3tc.ctex", "res://.godot/imported/BrickFloor.jpg-48e4cfc1da503087d7ad67466bac2fdc.etc2.ctex"]
 
 [params]
 

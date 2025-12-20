@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl72rf5ad7py3"
 path.s3tc="res://.godot/imported/fast_food_combo__game-ready_3d_asset_8.png-2dd9d41ca04f6c8ea8c8827f172e9697.s3tc.ctex"
+path.etc2="res://.godot/imported/fast_food_combo__game-ready_3d_asset_8.png-2dd9d41ca04f6c8ea8c8827f172e9697.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/foods/fast_food_combo__game-ready_3d_asset_8.png"
-dest_files=["res://.godot/imported/fast_food_combo__game-ready_3d_asset_8.png-2dd9d41ca04f6c8ea8c8827f172e9697.s3tc.ctex"]
+dest_files=["res://.godot/imported/fast_food_combo__game-ready_3d_asset_8.png-2dd9d41ca04f6c8ea8c8827f172e9697.s3tc.ctex", "res://.godot/imported/fast_food_combo__game-ready_3d_asset_8.png-2dd9d41ca04f6c8ea8c8827f172e9697.etc2.ctex"]
 
 [params]
 

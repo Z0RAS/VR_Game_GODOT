@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://h36ryfk1o0vh"
 path.s3tc="res://.godot/imported/hot_sauce_4.png-285d4d554ad2b33b744cb47924a9f184.s3tc.ctex"
+path.etc2="res://.godot/imported/hot_sauce_4.png-285d4d554ad2b33b744cb47924a9f184.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/foods/hot_sauce_4.png"
-dest_files=["res://.godot/imported/hot_sauce_4.png-285d4d554ad2b33b744cb47924a9f184.s3tc.ctex"]
+dest_files=["res://.godot/imported/hot_sauce_4.png-285d4d554ad2b33b744cb47924a9f184.s3tc.ctex", "res://.godot/imported/hot_sauce_4.png-285d4d554ad2b33b744cb47924a9f184.etc2.ctex"]
 
 [params]
 

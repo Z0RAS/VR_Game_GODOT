@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbitof3llt5uh"
 path.s3tc="res://.godot/imported/cartoon_tree_1.png-1a9b6783e484d91245174823610d938e.s3tc.ctex"
+path.etc2="res://.godot/imported/cartoon_tree_1.png-1a9b6783e484d91245174823610d938e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/Greenery/cartoon_tree_1.png"
-dest_files=["res://.godot/imported/cartoon_tree_1.png-1a9b6783e484d91245174823610d938e.s3tc.ctex"]
+dest_files=["res://.godot/imported/cartoon_tree_1.png-1a9b6783e484d91245174823610d938e.s3tc.ctex", "res://.godot/imported/cartoon_tree_1.png-1a9b6783e484d91245174823610d938e.etc2.ctex"]
 
 [params]
 

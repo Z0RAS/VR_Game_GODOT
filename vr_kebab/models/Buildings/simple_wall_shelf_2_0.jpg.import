@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsqglojbakod2"
 path.s3tc="res://.godot/imported/simple_wall_shelf_2_0.jpg-d7b44262c6d81f27f5b489f9eb13bb80.s3tc.ctex"
+path.etc2="res://.godot/imported/simple_wall_shelf_2_0.jpg-d7b44262c6d81f27f5b489f9eb13bb80.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/Buildings/simple_wall_shelf_2_0.jpg"
-dest_files=["res://.godot/imported/simple_wall_shelf_2_0.jpg-d7b44262c6d81f27f5b489f9eb13bb80.s3tc.ctex"]
+dest_files=["res://.godot/imported/simple_wall_shelf_2_0.jpg-d7b44262c6d81f27f5b489f9eb13bb80.s3tc.ctex", "res://.godot/imported/simple_wall_shelf_2_0.jpg-d7b44262c6d81f27f5b489f9eb13bb80.etc2.ctex"]
 
 [params]
 

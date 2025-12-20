@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwfifxiosuvo8"
 path.s3tc="res://.godot/imported/wanted_poster_0.png-46ab2905aea2c4c6d1376927fe040689.s3tc.ctex"
+path.etc2="res://.godot/imported/wanted_poster_0.png-46ab2905aea2c4c6d1376927fe040689.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/Buildings/wanted_poster_0.png"
-dest_files=["res://.godot/imported/wanted_poster_0.png-46ab2905aea2c4c6d1376927fe040689.s3tc.ctex"]
+dest_files=["res://.godot/imported/wanted_poster_0.png-46ab2905aea2c4c6d1376927fe040689.s3tc.ctex", "res://.godot/imported/wanted_poster_0.png-46ab2905aea2c4c6d1376927fe040689.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4p7ghoh3etqu"
 path.s3tc="res://.godot/imported/savorySauce.png-f6001575754b617763e23fecbf0dec71.s3tc.ctex"
+path.etc2="res://.godot/imported/savorySauce.png-f6001575754b617763e23fecbf0dec71.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/savorySauce.png"
-dest_files=["res://.godot/imported/savorySauce.png-f6001575754b617763e23fecbf0dec71.s3tc.ctex"]
+dest_files=["res://.godot/imported/savorySauce.png-f6001575754b617763e23fecbf0dec71.s3tc.ctex", "res://.godot/imported/savorySauce.png-f6001575754b617763e23fecbf0dec71.etc2.ctex"]
 
 [params]
 

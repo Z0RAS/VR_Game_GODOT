@@ -28,13 +28,11 @@ _surfaces = [{
 size = Vector3(0.2198255, 0.022644043, 0.03725815)
 
 [node name="Knife" type="RigidBody3D" groups=["Knife"]]
-collision_layer = 65543
-collision_mask = 196615
-mass = 10.0
-sleeping = true
+collision_layer = 65540
+collision_mask = 196614
+mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_id1oe")
-picked_up_layer = 65537
 metadata/_custom_type_script = "uid://uv2nmfekdmyy"
 
 [node name="GrabPointHandLeft" parent="." instance=ExtResource("6_qpye6")]
@@ -62,5 +60,5 @@ skeleton = NodePath("../../Knife")
 transform = Transform3D(0.09999999, 0, 0, 0, 0.1, -4.3711395e-09, 0, 4.3711395e-09, 0.10000001, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012239218, 0.0007019043, -0.00056266785)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001, 0.001, 0)
 shape = SubResource("BoxShape3D_qpye6")

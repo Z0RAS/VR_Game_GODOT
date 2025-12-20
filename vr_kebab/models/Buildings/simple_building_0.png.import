@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cklu3rbmt0eu2"
 path.s3tc="res://.godot/imported/simple_building_0.png-278c7e133a5eeb85d7623e77f9879a22.s3tc.ctex"
+path.etc2="res://.godot/imported/simple_building_0.png-278c7e133a5eeb85d7623e77f9879a22.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/Buildings/simple_building_0.png"
-dest_files=["res://.godot/imported/simple_building_0.png-278c7e133a5eeb85d7623e77f9879a22.s3tc.ctex"]
+dest_files=["res://.godot/imported/simple_building_0.png-278c7e133a5eeb85d7623e77f9879a22.s3tc.ctex", "res://.godot/imported/simple_building_0.png-278c7e133a5eeb85d7623e77f9879a22.etc2.ctex"]
 
 [params]
 

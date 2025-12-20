@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c52a27ugvclm1"
 path.s3tc="res://.godot/imported/trashcan.png-b5d6464321ee7a2bd825a0ca4927cba0.s3tc.ctex"
+path.etc2="res://.godot/imported/trashcan.png-b5d6464321ee7a2bd825a0ca4927cba0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/trashcan.png"
-dest_files=["res://.godot/imported/trashcan.png-b5d6464321ee7a2bd825a0ca4927cba0.s3tc.ctex"]
+dest_files=["res://.godot/imported/trashcan.png-b5d6464321ee7a2bd825a0ca4927cba0.s3tc.ctex", "res://.godot/imported/trashcan.png-b5d6464321ee7a2bd825a0ca4927cba0.etc2.ctex"]
 
 [params]
 

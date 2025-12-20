@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7ahalhhuevgp"
 path.s3tc="res://.godot/imported/sweetPotato_real_Image_1.png-e2007e6bb35c2da6577752977c24c6d3.s3tc.ctex"
+path.etc2="res://.godot/imported/sweetPotato_real_Image_1.png-e2007e6bb35c2da6577752977c24c6d3.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/foods/sweetPotato_real_Image_1.png"
-dest_files=["res://.godot/imported/sweetPotato_real_Image_1.png-e2007e6bb35c2da6577752977c24c6d3.s3tc.ctex"]
+dest_files=["res://.godot/imported/sweetPotato_real_Image_1.png-e2007e6bb35c2da6577752977c24c6d3.s3tc.ctex", "res://.godot/imported/sweetPotato_real_Image_1.png-e2007e6bb35c2da6577752977c24c6d3.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgx4acunx4ypj"
 path.s3tc="res://.godot/imported/kitchenLayout.jpg-55eaeb0e237b0d61933217f00c62bc65.s3tc.ctex"
+path.etc2="res://.godot/imported/kitchenLayout.jpg-55eaeb0e237b0d61933217f00c62bc65.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/kitchenLayout.jpg"
-dest_files=["res://.godot/imported/kitchenLayout.jpg-55eaeb0e237b0d61933217f00c62bc65.s3tc.ctex"]
+dest_files=["res://.godot/imported/kitchenLayout.jpg-55eaeb0e237b0d61933217f00c62bc65.s3tc.ctex", "res://.godot/imported/kitchenLayout.jpg-55eaeb0e237b0d61933217f00c62bc65.etc2.ctex"]
 
 [params]
 

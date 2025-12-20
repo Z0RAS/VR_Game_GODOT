@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdumcsfawyhmx"
 path.s3tc="res://.godot/imported/garage_door_2.png-8850481f1400410f52a331175b98f2ef.s3tc.ctex"
+path.etc2="res://.godot/imported/garage_door_2.png-8850481f1400410f52a331175b98f2ef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/Buildings/garage_door_2.png"
-dest_files=["res://.godot/imported/garage_door_2.png-8850481f1400410f52a331175b98f2ef.s3tc.ctex"]
+dest_files=["res://.godot/imported/garage_door_2.png-8850481f1400410f52a331175b98f2ef.s3tc.ctex", "res://.godot/imported/garage_door_2.png-8850481f1400410f52a331175b98f2ef.etc2.ctex"]
 
 [params]
 

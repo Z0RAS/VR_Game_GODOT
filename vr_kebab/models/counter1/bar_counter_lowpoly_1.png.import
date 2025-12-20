@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cafmnelfpjc1g"
 path.s3tc="res://.godot/imported/bar_counter_lowpoly_1.png-048f370d843e163ea5007b56f93ef4b5.s3tc.ctex"
+path.etc2="res://.godot/imported/bar_counter_lowpoly_1.png-048f370d843e163ea5007b56f93ef4b5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://models/counter1/bar_counter_lowpoly_1.png"
-dest_files=["res://.godot/imported/bar_counter_lowpoly_1.png-048f370d843e163ea5007b56f93ef4b5.s3tc.ctex"]
+dest_files=["res://.godot/imported/bar_counter_lowpoly_1.png-048f370d843e163ea5007b56f93ef4b5.s3tc.ctex", "res://.godot/imported/bar_counter_lowpoly_1.png-048f370d843e163ea5007b56f93ef4b5.etc2.ctex"]
 
 [params]
 

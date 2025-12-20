@@ -88,7 +88,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6uihr")
 
 [node name="Knife" type="MeshInstance3D" groups=["Knife"]]
-transform = Transform3D(1, 0, 0, 0, 1, -4.3711392e-08, 0, 4.3711392e-08, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_2gei3")
 skeleton = NodePath("")
 

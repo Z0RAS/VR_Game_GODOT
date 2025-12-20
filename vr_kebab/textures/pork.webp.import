@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7gniu1tv50bq"
 path.s3tc="res://.godot/imported/pork.webp-95f08a22b4a78e631ee16193894d37b5.s3tc.ctex"
+path.etc2="res://.godot/imported/pork.webp-95f08a22b4a78e631ee16193894d37b5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/pork.webp"
-dest_files=["res://.godot/imported/pork.webp-95f08a22b4a78e631ee16193894d37b5.s3tc.ctex"]
+dest_files=["res://.godot/imported/pork.webp-95f08a22b4a78e631ee16193894d37b5.s3tc.ctex", "res://.godot/imported/pork.webp-95f08a22b4a78e631ee16193894d37b5.etc2.ctex"]
 
 [params]
 

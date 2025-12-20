@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd460vq70bekd"
 path.s3tc="res://.godot/imported/cellFloor.webp-e3d794410ad70348478a3d74a44466e6.s3tc.ctex"
+path.etc2="res://.godot/imported/cellFloor.webp-e3d794410ad70348478a3d74a44466e6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/cellFloor.webp"
-dest_files=["res://.godot/imported/cellFloor.webp-e3d794410ad70348478a3d74a44466e6.s3tc.ctex"]
+dest_files=["res://.godot/imported/cellFloor.webp-e3d794410ad70348478a3d74a44466e6.s3tc.ctex", "res://.godot/imported/cellFloor.webp-e3d794410ad70348478a3d74a44466e6.etc2.ctex"]
 
 [params]
 

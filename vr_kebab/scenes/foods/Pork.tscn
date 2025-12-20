@@ -136,15 +136,6 @@ material_override = SubResource("StandardMaterial3D_pqktj")
 mesh = SubResource("ArrayMesh_ukrha")
 skeleton = NodePath("../../Pork")
 
-[node name="ItemLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-visible = false
-pixel_size = 0.0004
-texture_filter = 0
-text = "Sveiki"
-font_size = 60
-outline_size = 16
-
 [node name="Pork" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, -0.035212755, 0, 0.026040161)
 mesh = SubResource("ArrayMesh_f2o45")

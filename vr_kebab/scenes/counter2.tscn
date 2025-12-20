@@ -46,7 +46,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_24yi8")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8lsmo"]
-size = Vector3(2.736267, 2.8283749, 21.135254)
+size = Vector3(2.736267, 2.8629463, 20.775085)
 
 [node name="Cube" type="MeshInstance3D"]
 material_override = SubResource("StandardMaterial3D_xh8s0")
@@ -59,6 +59,6 @@ collision_layer = 589825
 collision_mask = 589825
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0059509277, -0.30560017, -0.028076172)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.32194483, 0.0043640137)
 shape = SubResource("BoxShape3D_8lsmo")
 debug_color = Color(0, 0.8474056, 0.9824758, 1)

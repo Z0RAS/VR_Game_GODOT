@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbp6b7ajr4fje"
 path.s3tc="res://.godot/imported/fries.png-2caec257c5866e8d9c262f3d51c1e49d.s3tc.ctex"
+path.etc2="res://.godot/imported/fries.png-2caec257c5866e8d9c262f3d51c1e49d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://textures/fries.png"
-dest_files=["res://.godot/imported/fries.png-2caec257c5866e8d9c262f3d51c1e49d.s3tc.ctex"]
+dest_files=["res://.godot/imported/fries.png-2caec257c5866e8d9c262f3d51c1e49d.s3tc.ctex", "res://.godot/imported/fries.png-2caec257c5866e8d9c262f3d51c1e49d.etc2.ctex"]
 
 [params]
 
