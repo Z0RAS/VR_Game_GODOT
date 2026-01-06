@@ -61,4 +61,3 @@ transform = Transform3D(0.1, 0, 0, 0, -4.371139e-09, 0.1, 0, -0.1, -4.371139e-09
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03743483, 0.0027678162, 0.054719895)
 shape = SubResource("BoxShape3D_v3ebc")
-debug_color = Color(5.198121e-06, 0.69428515, 0.95807093, 1)

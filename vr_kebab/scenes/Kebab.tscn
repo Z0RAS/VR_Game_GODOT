@@ -1,5 +1,6 @@
-[gd_scene load_steps=35 format=4 uid="uid://cio30ikipw4qq"]
+[gd_scene load_steps=36 format=4 uid="uid://cio30ikipw4qq"]
 
+[ext_resource type="Script" uid="uid://de7nwtvbl4de7" path="res://scripts/KebabMeatAndHeater.gd" id="1_4i3le"]
 [ext_resource type="Texture2D" uid="uid://d0imu1rc3q76g" path="res://models/kebab/shawarma_0.jpg" id="1_5no5s"]
 [ext_resource type="Texture2D" uid="uid://bvi8oyvobs1ix" path="res://models/kebab/shawarma_1.jpg" id="2_4i3le"]
 [ext_resource type="Texture2D" uid="uid://cmy3dxc7128hf" path="res://models/kebab/shawarma_2.jpg" id="3_38xkd"]
@@ -420,19 +421,22 @@ shadow_mesh = SubResource("ArrayMesh_25g70")
 size = Vector3(0.57, 1.3284376, 1.0324512)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4i3le"]
-size = Vector3(0.59749997, 1.345, 0.12713134)
+size = Vector3(0.59749997, 1.345, 0.13631958)
 
-[node name="Sketchfab_model" type="StaticBody3D"]
+[node name="Kebab" type="StaticBody3D" node_paths=PackedStringArray("kebab_meat", "kebab_heater")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_4i3le")
+kebab_meat = NodePath("Doner machine N191022_obj_cleaner_materialmerger_gles/Meat")
+kebab_heater = NodePath("Doner machine N191022_obj_cleaner_materialmerger_gles/Heater")
 
 [node name="Doner machine N191022_obj_cleaner_materialmerger_gles" type="Node3D" parent="."]
 transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)
 
-[node name="Object_2" type="MeshInstance3D" parent="Doner machine N191022_obj_cleaner_materialmerger_gles"]
+[node name="Heater" type="MeshInstance3D" parent="Doner machine N191022_obj_cleaner_materialmerger_gles"]
 mesh = SubResource("ArrayMesh_pl4v6")
 skeleton = NodePath("")
 
-[node name="Object_3" type="MeshInstance3D" parent="Doner machine N191022_obj_cleaner_materialmerger_gles"]
+[node name="Meat" type="MeshInstance3D" parent="Doner machine N191022_obj_cleaner_materialmerger_gles"]
 mesh = SubResource("ArrayMesh_hguok")
 skeleton = NodePath("")
 
@@ -469,6 +473,7 @@ mesh = SubResource("ArrayMesh_rtnej")
 skeleton = NodePath("")
 
 [node name="Object_15" type="MeshInstance3D" parent="Doner machine N191022_obj_cleaner_materialmerger_gles"]
+transform = Transform3D(0.8953156, -0.4454323, -1.9470464e-08, 0.4454323, 0.8953156, -4.5758988e-09, 1.9470463e-08, -4.5758988e-09, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_hfv3p")
 skeleton = NodePath("")
 
@@ -477,5 +482,5 @@ transform = Transform3D(1, 0, 0, 0, 0.39999998, 0, 0, 0, 1, 0, 0.10037917, 0.902
 shape = SubResource("BoxShape3D_5no5s")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.39999998, 0, 0, 0, 1, 0.013749987, -0.10591102, 0.08203586)
+transform = Transform3D(1, 0, 0, 0, 0.39999998, 0, 0, 0, 1, 0.013749987, -0.105911024, 0.08662998)
 shape = SubResource("BoxShape3D_4i3le")

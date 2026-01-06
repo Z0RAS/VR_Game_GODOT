@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=4 uid="uid://cl3nc6cphj1yg"]
+[gd_scene load_steps=8 format=4 uid="uid://cl3nc6cphj1yg"]
 
-[ext_resource type="Texture2D" uid="uid://c4eq1qqatmphw" path="res://models/foods/sweetPotato_real_Image_0.png" id="1_spymw"]
-[ext_resource type="Texture2D" uid="uid://c7ahalhhuevgp" path="res://models/foods/sweetPotato_real_Image_1.png" id="2_q2gau"]
-[ext_resource type="Texture2D" uid="uid://b56bun478s21v" path="res://models/foods/sweetPotato_real_Image_2.png" id="3_ucqqc"]
+[ext_resource type="Texture2D" uid="uid://b00clqocj8axq" path="res://models/foods/sweet_potato_0.png" id="1_q2gau"]
+[ext_resource type="Texture2D" uid="uid://bive2dl4xkfyu" path="res://models/foods/sweet_potato_1.png" id="2_ucqqc"]
+[ext_resource type="Texture2D" uid="uid://c6k7s1p8m5q2w" path="res://models/foods/sweet_potato_7.png" id="3_ucqqc"]
+[ext_resource type="Texture2D" uid="uid://3shwn4wmjisk" path="res://models/foods/sweet_potato_7.png" id="4_b4ryh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0q67w"]
 resource_name = "1001"
 cull_mode = 2
-albedo_texture = ExtResource("1_spymw")
+albedo_texture = ExtResource("1_q2gau")
 metallic = 1.0
-metallic_texture = ExtResource("2_q2gau")
+metallic_texture = ExtResource("2_ucqqc")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("2_q2gau")
+roughness_texture = ExtResource("4_b4ryh")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("3_ucqqc")

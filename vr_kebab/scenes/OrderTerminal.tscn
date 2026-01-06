@@ -1,6 +1,6 @@
 [gd_scene load_steps=65 format=3 uid="uid://b5kch8u4akc6i"]
 
-[ext_resource type="Script" uid="uid://bbgjp7dcirqth" path="res://scripts/order_terminal.gd" id="1_2xjl1"]
+[ext_resource type="Script" uid="uid://bbgjp7dcirqth" path="res://scripts/Order_Terminal.gd" id="1_2xjl1"]
 [ext_resource type="PackedScene" uid="uid://dlty1cgw780sy" path="res://scenes/npc.tscn" id="2_be764"]
 [ext_resource type="PackedScene" uid="uid://dmrwwufgg8ndm" path="res://scenes/Button.tscn" id="2_n5k12"]
 [ext_resource type="Texture2D" uid="uid://comgmsmq7fftn" path="res://textures/checkmark.png" id="3_05qmx"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dy78wg7e7tcus" path="res://textures/hotSauce.png" id="10_q31j5"]
 [ext_resource type="Texture2D" uid="uid://cflnnwryvh7sw" path="res://textures/garlicSauce.webp" id="11_v6ec2"]
 [ext_resource type="PackedScene" uid="uid://c3eibj0h1572f" path="res://scenes/RoundTimer.tscn" id="14_mloqh"]
+[ext_resource type="PackedScene" uid="uid://cgwffy2nmvsa6" path="res://scenes/Computer.tscn" id="16_ac7py"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_d5o8v"]
 viewport_path = NodePath("SubViewportContainer/SubViewport")
@@ -177,35 +178,46 @@ size = Vector3(2, 0.2, 1.2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_be764"]
 size = Vector3(2.009529, 0.21289063, 1.2183838)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_05qmx"]
-albedo_color = Color(0.35906908, 0.35906908, 0.35906908, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_8w48x"]
-size = Vector3(2.1, 2.1, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac7py"]
-albedo_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_q31j5"]
+size = Vector3(8, 7, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ac7py"]
-size = Vector3(2.1035767, 2.1175537, 1.0316162)
+size = Vector3(2.1035767, 2.1175537, 1.7487183)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q31j5"]
+size = Vector3(1.037857, 1.8475037, 1.907074)
 
 [node name="OrderTerminal" type="Node3D"]
 script = ExtResource("1_2xjl1")
 button_paths = Array[NodePath]([NodePath("Buttons/Button"), NodePath("Buttons/Button2"), NodePath("Buttons/Button3"), NodePath("Buttons/Button4"), NodePath("Buttons/Button5"), NodePath("Buttons/Button6"), NodePath("Buttons/Button7"), NodePath("Buttons/Button8"), NodePath("Buttons/Button9")])
 confirm_button_path = NodePath("Buttons/ButtonConfirm")
 delete_button_path = NodePath("Buttons/ButtonDelete")
+speechBubbleOrderLabel = null
 terminal_viewport_path = NodePath("SubViewportContainer/SubViewport")
 money_label_path = NodePath("SubViewportContainer/SubViewport/Control/Money")
 timer_path = NodePath("SubViewportContainer/SubViewport/Control/Control")
+watched_door_path = null
+npc_spawn_point_path = null
+counter_point_path = null
 npc_scene = ExtResource("2_be764")
+cooldown_time = null
+exit_point_path = null
 timer_label_path = NodePath("SubViewportContainer/SubViewport/Control/Control")
+corner_entry_point_path = null
+corner_exit_point_path = null
+product_scenes = null
+product_spawn_points = null
+product_costs = null
+radio_tracks = null
 
 [node name="Screen" type="Node3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Screen"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(0.7992983, 0.16718915, 0.007968064, -0.0022738802, 0.062014278, -0.70382357, -0.15855923, 0.8419123, 0.050260518, -0.03261366, 0.12699503, -0.20807363)
 material_override = SubResource("StandardMaterial3D_2xjl1")
 mesh = SubResource("PlaneMesh_k0vs0")
 
@@ -407,19 +419,20 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0047283173, -1.0426016, 1.0181624)
 shape = SubResource("BoxShape3D_be764")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+[node name="Computer" parent="StaticBody3D" instance=ExtResource("16_ac7py")]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0.8822653, -1.0509969, 0.14673603)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5095773)
-material_override = SubResource("StandardMaterial3D_05qmx")
-mesh = SubResource("BoxMesh_8w48x")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/MeshInstance3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.7302288)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/Computer"]
+transform = Transform3D(4.905182, -0.07856512, 0.9659274, 0, 4.9835424, 0.4053437, -0.9691173, -0.39765695, 4.8890367, -22.829746, 29.443317, -10.43826)
 material_override = SubResource("StandardMaterial3D_ac7py")
 mesh = SubResource("BoxMesh_q31j5")
 
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049743652, -0.0022583008, -0.5046997)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049743652, -0.0022583008, -0.86325073)
 shape = SubResource("BoxShape3D_ac7py")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3382761, -0.057510376, -0.7840729)
+shape = SubResource("BoxShape3D_q31j5")

@@ -3,8 +3,8 @@ extends Node3D  # root Node3D
 
 @onready var loading_label: Label3D = $XRCamera3D/Label3D
 
-const GAME_SCENE_PATH := "res://scenes/main.tscn"
-const PLAYER_SCENE_PATH := "res://scenes/player.tscn"
+var game_scene_path := "res://scenes/main.tscn"
+var player_scene_path := "res://scenes/player.tscn"
 
 var loading_dots := 0
 var loading_running := true
@@ -50,12 +50,23 @@ func start_vr_and_load_game() -> void:
 
 	# Load the game scene
 	set_message("Loading game scene...")
-	var packed_scene: PackedScene = load(GAME_SCENE_PATH) as PackedScene
+	
+	# Debug: Check if file exists first
+	print("Checking for game scene at: ", game_scene_path)
+	if not ResourceLoader.exists(game_scene_path):
+		push_error("Game scene file does not exist at: " + game_scene_path)
+		set_message("Scene file not found: " + game_scene_path)
+		return
+	
+	var packed_scene: PackedScene = load(game_scene_path) as PackedScene
+	
+	# Debug: print the result
 	if not packed_scene:
-		push_error("Failed to load Game scene!")
+		push_error("Failed to load Game scene from: " + game_scene_path)
 		set_message("Failed to load game scene!")
 		return
-
+	
+	print("Successfully loaded game scene")
 	var game_scene: Node3D = packed_scene.instantiate() as Node3D
 	get_tree().get_root().add_child(game_scene)
 	get_tree().set_current_scene(game_scene)
@@ -73,7 +84,11 @@ func start_vr_and_load_game() -> void:
 
 
 func spawn_player(game_root: Node3D) -> void:
-	var player_scene := preload(PLAYER_SCENE_PATH)
+	var player_scene = load(player_scene_path) as PackedScene
+	if not player_scene:
+		push_error("Failed to load Player scene from: " + player_scene_path)
+		return
+	
 	var player := player_scene.instantiate() as XROrigin3D
 	game_root.add_child(player)
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3eibj0h1572f"]
 
-[ext_resource type="Script" uid="uid://bc6mbfmhfkkal" path="res://round_timer.gd" id="1_r67w4"]
+[ext_resource type="Script" uid="uid://bc6mbfmhfkkal" path="res://scripts/Round_Timer.gd" id="1_r67w4"]
 [ext_resource type="Texture2D" uid="uid://bgmdku2y4lpbo" path="res://textures/redCicrle.png" id="2_co0ik"]
 [ext_resource type="Texture2D" uid="uid://cah6qn1x50d6q" path="res://textures/greenCircle.png" id="3_qe754"]
 

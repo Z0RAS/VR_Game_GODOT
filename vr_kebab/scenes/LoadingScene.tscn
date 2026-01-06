@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cypfqarxeetlf"]
 
-[ext_resource type="Script" uid="uid://ibjwtii1v506" path="res://scripts/loading_scene.gd" id="1_0tklf"]
+[ext_resource type="Script" uid="uid://ibjwtii1v506" path="res://scripts/Loading_Scene.gd" id="1_0tklf"]
 
 [node name="Node3D" type="XROrigin3D"]
 script = ExtResource("1_0tklf")

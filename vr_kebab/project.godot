@@ -20,8 +20,8 @@ config/icon="res://textures/icon.svg"
 XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
 XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
 XrSimulator="*res://addons/xr-simulator/XRSimulator.tscn"
-Global="*res://scripts/Global.gd"
-AudioManager="*res://scripts/AudioManager.gd"
+Global="*res://scripts/Global_Values.gd"
+AudioManager="*res://scripts/Audio_Player.gd"
 
 [display]
 
@@ -40,4 +40,3 @@ anti_aliasing/quality/msaa_3d=2
 
 openxr/enabled=true
 shaders/enabled=true
-shaders/main_scene="uid://cypfqarxeetlf"

@@ -35,7 +35,6 @@ hand_material_override = ExtResource("2_y4r1p")
 default_pose = SubResource("Resource_3v2ag")
 
 [node name="FunctionPickup" parent="LeftHand" instance=ExtResource("3_d2wvv")]
-grab_distance = 0.1
 
 [node name="RightHand" type="XRController3D" parent="." groups=["hands"]]
 tracker = &"right_hand"
@@ -45,7 +44,6 @@ trigger_action = "grip"
 
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("3_d2wvv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008641481, 0)
-grab_distance = 0.03
 
 [node name="MovementDirect" parent="RightHand" instance=ExtResource("7_oprun")]
 
@@ -64,7 +62,7 @@ target_radius = 0.01
 
 [node name="PlayerBody" parent="." instance=ExtResource("9_qfm1y")]
 collision_mask = 524288
-player_calibrate_height = false
+push_rigid_bodies = false
 
 [node name="SFXPlayer" type="AudioStreamPlayer3D" parent="."]
 
@@ -77,5 +75,3 @@ autoplay = true
 stream = ExtResource("11_3v2ag")
 volume_db = -20.984
 autoplay = true
-
-[node name="PlayerReal" type="Node3D" parent="."]

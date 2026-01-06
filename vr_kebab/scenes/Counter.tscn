@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://jt0m3uudxduh"]
+[gd_scene load_steps=18 format=4 uid="uid://jt0m3uudxduh"]
 
 [ext_resource type="Texture2D" uid="uid://clm68ydndp7sj" path="res://models/counter1/bar_counter_lowpoly_0.png" id="1_jw0do"]
 [ext_resource type="Texture2D" uid="uid://cafmnelfpjc1g" path="res://models/counter1/bar_counter_lowpoly_1.png" id="2_3jo6w"]
@@ -49,6 +49,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hj30m")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jyhvf"]
+absorbent = true
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhvf"]
 size = Vector3(0.6865463, 2.2388306, 1.0637665)
 
@@ -93,6 +96,7 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 collision_layer = 589825
 collision_mask = 589825
+physics_material_override = SubResource("PhysicsMaterial_jyhvf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23238754, 0.40219113, 0.5337753)

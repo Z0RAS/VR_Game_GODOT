@@ -1,9 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnne2r3251ibm"]
+[gd_scene load_steps=5 format=3 uid="uid://cnne2r3251ibm"]
 
-[ext_resource type="Script" uid="uid://6w5ofnje0sh1" path="res://scripts/upgrades_ui.gd" id="1_vey62"]
+[ext_resource type="Script" uid="uid://6w5ofnje0sh1" path="res://scripts/Upgrades_UI.gd" id="1_vey62"]
+
+[sub_resource type="FontFile" id="FontFile_vey62"]
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_rybl3"]
+font = SubResource("FontFile_vey62")
 font_size = 64
+font_color = Color(0.66839087, 0.066919126, 0.44729513, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vey62"]
 font_size = 32
